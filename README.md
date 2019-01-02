@@ -19,7 +19,7 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 Calibrating your Live Z is the most important thing you can do, because your first layer is the most important layer and is what supports all of your other layers. Unfortunately, the Prusa Mk3's built-in live Z calibration has many flaws. For one, it only works with .40mm nozzle size (stock nozzle). Second, the little square it prints at the end for inspection is very small and prints too fast to make any last minute adjustments. I've found this to be the best way to Calibrate Live Z:
 
-1. Download my 100x100x0.20 calibration STL.
+1. Download my [100x100x0.20 calibration STL](https://github.com/photog0411/Prusa-i3-Mk3-Resources/blob/master/Calibration%20STLs/LiveZ100x100.stl).
 
 2. Open it into Slic3r and slice it with the following settings:
 * 0.20mm Layer Height
@@ -41,7 +41,7 @@ Calibrating your Live Z is the most important thing you can do, because your fir
 
 Before trying the steps below, make sure you have [calibrated your live Z correctly](#livez). Ignore the Prusa video where Josef says it should be a value of around -1.200. Your value will depend on how far up your PINDA is mounted and how thick your bed plate is. Your live Z value is adjusted properly when the lines of plastic that are laid down do not have any gaps in between them. If you think your live Z is adjusted properly, you may begin the following steps: 
 
-1. Clean your bed plate with [99.9% Isopropyl alcohol](https://www.amazon.com/dp/B005DNQX3C/ref=cm_sw_r_cp_apap_2tu8Mct2ObEU7) and UNSCENTED paper towels. Do not use anything less than 99.9% and do not rub it in a circular motion, rather, rub it from side to side. Your bed plate has oils on it (from the manufacturing process, and from whenever you touch it with your oily hands) and your goal is getting the oil off, not spreading it around. It's very important to also use unscented paper towels with no coloring designs as these may have oils in them.  
+1. Clean your bed plate with [99.9% Isopropyl alcohol](https://www.amazon.com/dp/B005DNQX3C/ref=cm_sw_r_cp_apap_2tu8Mct2ObEU7) and UNSCENTED paper towels. Do not use anything less than 99.9% and do not rub it in a circular motion, rather, rub it from side to side. Your bed plate has oils on it from the manufacturing process, and from whenever you touch it with your oily hands. Your goal is getting the oil off, not spreading it around! It's very important to also use unscented paper towels with no coloring designs as these may have oils in them.  
 
 2. If the isopropyl alcohol fails to help, use unscented dish soap and hot water to clean your bed plate in the sink. Scrub it well, and dry with unscented paper towels. Be sure to not touch the clean bed plate with your hands once washed (grip the edges only). Soap breaks down grease and oils even better than Isopropyl alcohol, but is obviously a more annoying process. If you don't touch your bed plate too much, you should be fine with washing your plate in the sink once per month, and rubbing it with isopropyl alcohol once a day before your first print of the day. 
 
