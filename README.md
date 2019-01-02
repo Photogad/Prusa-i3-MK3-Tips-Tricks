@@ -15,6 +15,8 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 [Problems Printing PETG Unless Very Slow Speed Used](#petg)
 
+[Need More Help?](#help)
+
 
 # Calibrating Live Z My Way
 <a name="livez"/>
@@ -122,3 +124,12 @@ A wonderful github user named [Supermerill](https://github.com/supermerill) has 
 <a name="petg"/>
 
 I had major issues printing PETG using the default Prusa profiles - the infill would just crumble and break. After much trial and error, I discovered the only way to get it to print was to lower the infill speed down ridiculously low to like 15mms. Obviously, this was not preferred. But I was able to eventually get it solved! The easy solution is to just print at 265c for PETG. The Prusa default of 235c is too cold. As someone on the Prusa discord server said to me, "PETG likes it hot". This is absolutely true. After switching to 265c for PETG, it prints faster and more beautiful for me than ever before.
+
+
+# Need More Help?
+<a name="help"/>
+Check out the Prusa Owner's Wiki:
+https://github.com/mcm001/prusaOwnersWiki
+
+Or ask a question in the 602 Wasteland Discord Chat:
+https://discord.gg/hYUjSnW
