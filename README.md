@@ -128,8 +128,12 @@ I had major issues printing PETG using the default Prusa profiles - the infill w
 
 # Need More Help?
 <a name="help"/>
+
 Check out the Prusa Owner's Wiki:
+
 https://github.com/mcm001/prusaOwnersWiki
 
+
 Or ask a question in the 602 Wasteland Discord Chat:
+
 https://discord.gg/hYUjSnW
