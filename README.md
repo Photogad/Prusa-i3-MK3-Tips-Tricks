@@ -7,22 +7,23 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 **Getting Up And Running**
 
-[Calibrating Live Z My Way](#livez)
+• [Calibrating Live Z My Way](#livez)
 
 **Troubleshooting**
 
-[First Layer Adhesion Issues And How To Fix Them](#flai)
+• [First Layer Adhesion Issues And How To Fix Them](#flai)
 
-[Problems Printing PETG Unless Very Slow Speed Used](#petg)
-
+• [Problems Printing PETG Unless Very Slow Speed Used](#petg)
+• 
 [Need More Help?](#help)
 
 **Take Things To The Next Level**
 
-[My Optimized Startup GCODE](#gcode)
+• [My Optimized Startup GCODE](#gcode)
 
-[Slic3r PE On Meth](#meth)
+• [Slic3r PE On Meth](#meth)
 
+• [Recommended Mods For Your Mk3](#mods)
 
 
 
@@ -134,6 +135,26 @@ A wonderful github user named [Supermerill](https://github.com/supermerill) has 
 <a name="petg"/>
 
 I had major issues printing PETG using the default Prusa profiles - the infill would just crumble and break. After much trial and error, I discovered the only way to get it to print was to lower the infill speed down ridiculously low to like 15mms. Obviously, this was not preferred. But I was able to eventually get it solved! The easy solution is to just print at 265c for PETG. The Prusa default of 235c is too cold. As someone on the Prusa discord server said to me, "PETG likes it hot". This is absolutely true. After switching to 265c for PETG, it prints faster and more beautiful for me than ever before.
+
+
+# Recommended Mods For Your Mk3
+<a name="mods"/>
+
+Below are mods I highly recommend you make or purchase for your Mk3. They will either make your life easier, or improve the quality of your prints. Maybe both.
+
+* [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It will increase your print quality, make it easy to tension your X axis belt, and also make your printer easier to take apart or fix in the future. I highly recommend it, but make sure to print a [compatible fan duct](https://www.thingiverse.com/thing:3320490)  for it too!
+
+* [Taurus Y Axis](https://www.thingiverse.com/thing:3269389). This is a new Y motor mount and belt system, mostly all printable as well. It is much stronger than the default Y axis parts, and allows you to easily tension your Y axis belt. You may notice a slight increase in print quality with this.
+
+* [Mk3 Dust Filter](https://www.thingiverse.com/thing:2983334). Easily print and make a dust filter for your extruder. This will help prevent noggle clogs from happening by filtering dust from your filament. 
+
+* [Extruder Visualizer](https://www.thingiverse.com/thing:2638857). Decorate your extruder, but at the same time be able to see what your motor is doing. Great for troubleshooting extruder movements. There are many other design available on thingiverse, or you make your own. All you need is a magnet and some glue.
+
+* [E3D Nozzle Holder](https://www.thingiverse.com/thing:3280665). A great way to store your E3D nozzles if you have a bunch of them.
+
+* [E3D Nozzle Change Tool](https://www.thingiverse.com/thing:3277211). Change your nozzles very easily if you have multiple nozzles.
+
+* [Prusa Mk3 Top Tool Holder](https://www.thingiverse.com/thing:3175038). Conveniently store and access the most frequently used tools.
 
 
 # Need More Help?
