@@ -1,15 +1,18 @@
 # Prusa i3 Mk3 Resources
 Resources for Prusa i3 Mk3 Printer. The following information are things that I have learned from my 3D printing journey with the Prusa Mk3. I don't claim that everything here is 100% factual, and if you think I am providing any incorrect information, please let me know by posting on my Github Issues list! :)
 
+
 # Table of Contents  
 [Calibrating Live Z My Way](#livez)  
 [First Layer Adhesion Issues And How To Fix Them](#flai)  
 [My Optimized Startup GCODE](#gcode)
 [Slic3r PE On Meth](#meth)
 
+
 # Calibrating Live Z My Way
 <a name="livez"/>
 Unfortunately, the Prusa Mk3's built-in live Z calibration has many flaws. For one, it only works with .40mm nozzle size (stock nozzle). Second, the little square it prints at the end for inspection is very small and prints too fast to make any last minute adjustments. I've found this to be the best way to Calibrate Live Z. TBA!
+
 
 # First Layer Adhesion Issues And How To Fix Them
 <a name="flai"/>
@@ -23,6 +26,7 @@ Before trying the steps below, make sure you have calibrated your live Z correct
 7) Run the temperature calibration procedure in your printer's options. It will calibrate your PINDA to be more accurate which will help your bed to be more level.
 8) Use my startup GCODE below. I've highly optimized it to give the best possible first layer results.
 9) If all else fails, buy a powder coated sheet. You can get an aftermarket one on Amazon called [thekkiinngg v3](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV/ref=sr_1_1?s=hpc&ie=UTF8&qid=1546403022&sr=8-1&keywords=prusa+powder+coated) for $60. It's a bit pricey, but PLA sticks amazingly well to this sheet,  and I love the textured finish it gives my prints. Once Prusa begins selling their own powder coated sheets again, they will be a better option.
+
 
 # My Optimized Startup GCODE
 <a name="gcode"/>
@@ -72,6 +76,7 @@ G92 E0.0
 ; And a beep to let us know the print is starting!
 M300 S100 P10 ; chirp
 ```
+
 
 # Slic3r PE On Meth
 <a name="meth"/>
