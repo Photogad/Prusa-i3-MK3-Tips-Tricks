@@ -1,8 +1,14 @@
 # Prusa i3 Mk3 Resources
 Resources for Prusa i3 Mk3 Printer. The following information are things that I have learned from my 3D printing journey with the Prusa Mk3. I don't claim that everything here is 100% factual, and if you think I am providing any incorrect information, please let me know by posting on my Github Issues list! :)
 
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
 
-# First Layer Adhesion Issues
+# First Layer Adhesion Issues And How To Fix Them
 Before trying the steps below, make sure you have calibrated your live Z correctly. Ignore the Prusa video where Josef says it should be a value of around -1.200. Your value will depend on how far up your PINDA is mounted and how thick your bed plate is. Your live Z value is adjusted properly when the lines of plastic that are laid down do not have any gaps in between them. If you think your live Z is adjusted properly, you may begin the following steps: 
 1) Clean your bed plate with [99.9% Isopropyl alcohol](https://www.amazon.com/dp/B005DNQX3C/ref=cm_sw_r_cp_apap_2tu8Mct2ObEU7) and UNSCENTED paper towels. Do not use anything less than 99.9% and do not rub it in a circular motion, rather, rub it from side to side. Your bed plate has oils on it (from the manufacturing process, and from whenever you touch it with your oily hands) and your goal is getting the oil off, not spreading it around. It's very important to also use unscented paper towels with no coloring designs as these may have oils in them.  
 2) If the isopropyl alcohol fails to help, use unscented dish soap and hot water to clean your bed plate in the sink. Scrub it well, and dry with unscented paper towels. Be sure to not touch the clean bed plate with your hands once washed (grip the edges only). Soap breaks down grease and oils even better than Isopropyl alcohol, but is obviously a more annoying process. If you don't touch your bed plate too much, you should be fine with washing your plate in the sink once per month, and rubbing it with isopropyl alcohol once a day before your first print of the day. 
@@ -15,10 +21,9 @@ Before trying the steps below, make sure you have calibrated your live Z correct
 9) If all else fails, buy a powder coated sheet. You can get an aftermarket one on Amazon called [thekkiinngg v3](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV/ref=sr_1_1?s=hpc&ie=UTF8&qid=1546403022&sr=8-1&keywords=prusa+powder+coated) for $60. It's a bit pricey, but PLA sticks amazingly well to this sheet,  and I love the textured finish it gives my prints. Once Prusa begins selling their own powder coated sheets again, they will be a better option.
 
 # Calibrating Live Z My Way
+I've found that
 
-Tbd
-
-# My optimized startup GCODE
+# My Optimized Startup GCODE
 The following startup GCODE is my custom version which has several advantages over the default Prusa startup gcode. First, it waits until the PINDA is at or below 35c before it does anything, and it enables the print fan to help cool it down quicker in case it's already too warm. It then proceeds to preheat the nozzle to warm temperature (but not the actual print temperature) so that when the printer is doing the automated bed leveling, you do not get plastic leaking everywhere. It sets a standardized bed temp of 65c for the automated bed leveling procedure (change this to whatever bed temperature you do your live Z adjust at) because studies have shown that doing the mesh bed leveling at the same temperature that you did your live Z adjust will be the most accurate. Then, it warms up and waits for your PINDA to reach 35c because studies have also shown that the PINDA is the most accurate after it has warmed up to 35c or warmer and does the mesh bed leveling. Finally, it warms everything up to your real printing temperatures, turns the print fan on so you don't get any ooze, runs an advanced purge line that purges better and is easier to remove from your bed (PETG!), and finally your print begins. 
 
 ```M83  ; extruder relative mode
