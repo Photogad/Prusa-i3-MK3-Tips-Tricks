@@ -1,8 +1,10 @@
 # Prusa i3 Mk3 Resources
-Resources for Prusa i3 Mk3 Printer. The following information are things that I have learned from my 3D printing journey with the Prusa Mk3. I don't claim that everything here is 100% factual, and if you think I am providing any incorrect information, please let me know by posting on my Github Issues list! :)
+
+Resources for Prusa i3 Mk3 Printer. The following information are things that I have learned from my 3D printing journey with the Prusa Mk3. I don't claim that everything here is 100% factual, and if you think I am providing any incorrect information, please let me know by posting on my Github Issues list!
 
 
 # Table of Contents  
+
 [Calibrating Live Z My Way](#livez)  
 
 [First Layer Adhesion Issues And How To Fix Them](#flai)  
@@ -14,11 +16,13 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 # Calibrating Live Z My Way
 <a name="livez"/>
+
 Unfortunately, the Prusa Mk3's built-in live Z calibration has many flaws. For one, it only works with .40mm nozzle size (stock nozzle). Second, the little square it prints at the end for inspection is very small and prints too fast to make any last minute adjustments. I've found this to be the best way to Calibrate Live Z. TBA!
 
 
 # First Layer Adhesion Issues And How To Fix Them
 <a name="flai"/>
+
 Before trying the steps below, make sure you have calibrated your live Z correctly. Ignore the Prusa video where Josef says it should be a value of around -1.200. Your value will depend on how far up your PINDA is mounted and how thick your bed plate is. Your live Z value is adjusted properly when the lines of plastic that are laid down do not have any gaps in between them. If you think your live Z is adjusted properly, you may begin the following steps: 
 
 1) Clean your bed plate with [99.9% Isopropyl alcohol](https://www.amazon.com/dp/B005DNQX3C/ref=cm_sw_r_cp_apap_2tu8Mct2ObEU7) and UNSCENTED paper towels. Do not use anything less than 99.9% and do not rub it in a circular motion, rather, rub it from side to side. Your bed plate has oils on it (from the manufacturing process, and from whenever you touch it with your oily hands) and your goal is getting the oil off, not spreading it around. It's very important to also use unscented paper towels with no coloring designs as these may have oils in them.  
@@ -42,7 +46,9 @@ Before trying the steps below, make sure you have calibrated your live Z correct
 
 # My Optimized Startup GCODE
 <a name="gcode"/>
+
 The following startup GCODE is my custom version which has several advantages over the default Prusa startup gcode. First, it waits until the PINDA is at or below 35c before it does anything, and it enables the print fan to help cool it down quicker in case it's already too warm. It then proceeds to preheat the nozzle to warm temperature (but not the actual print temperature) so that when the printer is doing the automated bed leveling, you do not get plastic leaking everywhere. It sets a standardized bed temp of 65c for the automated bed leveling procedure (change this to whatever bed temperature you do your live Z adjust at) because studies have shown that doing the mesh bed leveling at the same temperature that you did your live Z adjust will be the most accurate. Then, it warms up and waits for your PINDA to reach 35c because studies have also shown that the PINDA is the most accurate after it has warmed up to 35c or warmer and does the mesh bed leveling. Finally, it warms everything up to your real printing temperatures, turns the print fan on so you don't get any ooze, runs an advanced purge line that purges better and is easier to remove from your bed (PETG!), and finally your print begins. 
+
 
 ```M83  ; extruder relative mode
 
@@ -92,4 +98,5 @@ M300 S100 P10 ; chirp
 
 # Slic3r PE On Meth
 <a name="meth"/>
+
 A wonderful github user named [Supermerill](https://github.com/supermerill) has created a custom version of Slic3r PE called [Slic3r++](https://github.com/supermerill/Slic3r). I highly recommend using this version, because it has a lot of new features that the official Slic3r PE is lacking, such as but not limited to top surface ironing, XY hole compensation, continuous perimeter loops, interior top layer supports, avoiding unsupported perimeters, and more! Supermerill  keeps his version current with the latest release of Slic3r PE (so you won't miss out on anything from the main version!) and he's really smart (he's actually the guy that invented Gyroid infill). 
