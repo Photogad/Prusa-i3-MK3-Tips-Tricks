@@ -6,8 +6,8 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 [First Layer Adhesion Issues And How To Fix Them](#flai)  
 [My Optimized Startup GCODE](#gcode)
 
-<a name="livez"/>
 # Calibrating Live Z My Way
+<a name="livez"/>
 Unfortunately, the Prusa Mk3's built-in live Z calibration has many flaws. For one, it only works with .40mm nozzle size (stock nozzle). Second, the little square it prints at the end for inspection is very small and prints too fast to make any last minute adjustments. I've found this to be the best way to Calibrate Live Z. TBA!
 
 <a name="flai"/>
