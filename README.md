@@ -42,11 +42,8 @@ Calibrating your Live Z is the most important thing you can do, because your fir
 * Rectilinear top/bottom infill with fill angle of 90 degrees.
 * Bed temp at the bed temp you will use for printing the majority of your things.
 3. Now print it! It will begin printing a big live Z calibration square that is much easier to see what's going on than with the built-in Prusa one. Because you did infill before perimeters, it will start much quicker because you don't have to wait for the uneeded permieter to get laid down first. And because you have the infill angle set to 90 degrees, it won't waste filament in the corner of the square where you can't see whta's going on.
-
 4. Press the knob on the front of your printer and enter the live Z adjustment mode.
-
 5. Adjust the live Z number until each line that gets laid down has no gaps between it and the last one. You don't want to smush the plastic down too much where the plastic layer developes ridges in it, but really do not want any gaps. I would actually recommend starting at -0.300 and working your way up from there in -0.100 increments. Once you get to a number that looks good (it was -0.700 for me) you can adjust in smaller increments of -0.025 to get it perfect.
-
 6. If you use multiple nozzle sizes, be sure to make a calibration GCODE for each of your nozzles! I personally have a /calibration/ folder on my SD card and calibrate the live Z whenever I swap nozzles.
 
 
