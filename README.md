@@ -5,17 +5,27 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 # Table of Contents  
 
-[Calibrating Live Z My Way](#livez)  
+**Getting Up And Running**
 
-[First Layer Adhesion Issues And How To Fix Them](#flai)  
+[Calibrating Live Z My Way](#livez)
+
+**Troubleshooting**
+
+[First Layer Adhesion Issues And How To Fix Them](#flai)
+
+[Problems Printing PETG Unless Very Slow Speed Used](#petg)
+
+[Need More Help?](#help)
+
+**Take Things To The Next Level**
 
 [My Optimized Startup GCODE](#gcode)
 
 [Slic3r PE On Meth](#meth)
 
-[Problems Printing PETG Unless Very Slow Speed Used](#petg)
 
-[Need More Help?](#help)
+
+
 
 
 # Calibrating Live Z My Way
