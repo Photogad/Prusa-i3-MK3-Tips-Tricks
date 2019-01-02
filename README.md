@@ -1,4 +1,4 @@
-# Prusa i3 Mk3 Resources
+# Prusa i3 MK3 Tips and Tricks
 
 Resources for Prusa i3 Mk3 Printer. The following information are things that I have learned from my 3D printing journey with the Prusa Mk3. I don't claim that everything here is 100% factual, and if you think I am providing any incorrect information, please let me know by posting on my Github Issues list!
 
