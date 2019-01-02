@@ -12,7 +12,7 @@ Before trying the steps below, make sure you have calibrated your live Z correct
 6) If you are using a smooth PEI sheet, rough it up gently with a scotchbrite pad or fine grit sandpaper. It won't affect your print quality and the rough surface will create more friction for the hot plastic to stick to. 
 7) Run the temperature calibration procedure in your printer's options. It will calibrate your PINDA to be more accurate which will help your bed to be more level.
 8) Use my startup GCODE below. I've highly optimized it to give the best possible first layer results.
-9) If all else fails, buy a powder coated sheet. You can get an aftermarket one on Amazon called "thekkiinngg v3" for $60. It's a bit pricey, but PLA sticks amazingly well to this sheet,  and I love the textured finish it gives my prints. Once Prusa begins selling their own powder coated sheets again, they will be a better option.
+9) If all else fails, buy a powder coated sheet. You can get an aftermarket one on Amazon called [thekkiinngg v3](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV/ref=sr_1_1?s=hpc&ie=UTF8&qid=1546403022&sr=8-1&keywords=prusa+powder+coated) for $60. It's a bit pricey, but PLA sticks amazingly well to this sheet,  and I love the textured finish it gives my prints. Once Prusa begins selling their own powder coated sheets again, they will be a better option.
 
 # Calibrating Live Z My Way
 
