@@ -5,6 +5,7 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 # Table of Contents  
 
+
 **Getting Up And Running**
 
 • [Calibrating Live Z My Way](#livez)
@@ -34,14 +35,12 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 Calibrating your Live Z is the most important thing you can do, because your first layer is the most important layer and is what supports all of your other layers. Unfortunately, the Prusa Mk3's built-in live Z calibration has many flaws. For one, it only works with .40mm nozzle size (stock nozzle). Second, the little square it prints at the end for inspection is very small and prints too fast to make any last minute adjustments. I've found this to be the best way to Calibrate Live Z:
 
-1. Download my [100x100x0.20 calibration STL](https://github.com/photog0411/Prusa-i3-Mk3-Resources/blob/master/Calibration%20STLs/LiveZ100x100.stl).
-
+1. Download my [100x100x0.20 calibration STL](https://github.com/photog0411/Prusa-i3-Mk3-Resources/blob/master/Calibration%20STLs/LiveZ100x100.stl) file.
 2. Open it into Slic3r and slice it with the following settings:
 * 0.20mm Layer Height
 * Infill Before Perimeters
 * Rectilinear top/bottom infill with fill angle of 90 degrees.
 * Bed temp at the bed temp you will use for printing the majority of your things.
-
 3. Now print it! It will begin printing a big live Z calibration square that is much easier to see what's going on than with the built-in Prusa one. Because you did infill before perimeters, it will start much quicker because you don't have to wait for the uneeded permieter to get laid down first. And because you have the infill angle set to 90 degrees, it won't waste filament in the corner of the square where you can't see whta's going on.
 
 4. Press the knob on the front of your printer and enter the live Z adjustment mode.
