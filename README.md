@@ -26,6 +26,8 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 • [Recommended Mods For Your Mk3](#mods)
 
+• [Achieving Better Print Quality](#quality)
+
 
 
 
@@ -145,6 +147,20 @@ Below are mods I highly recommend you make or purchase for your Mk3. They will e
 * [E3D Nozzle Holder](https://www.thingiverse.com/thing:3280665). A great way to store your E3D nozzles if you have a bunch of them.
 * [E3D Nozzle Change Tool](https://www.thingiverse.com/thing:3277211). Change your nozzles very easily if you have multiple nozzles.
 * [Prusa Mk3 Top Tool Holder](https://www.thingiverse.com/thing:3175038). Conveniently store and access the most frequently used tools.
+
+
+# Achieving Better Print Quality
+<a name="quality"/>
+
+There are many things you can do to your Prusa MK3 printer to make it print objects at higher quality. Mostly, it will be print settings in Slic3r that you will have to tweak with trial and error on a per object basis. But let's discuss acheiving better quality other ways!
+
+The Prusa printers are known to be cursed with a problem called the [602 Inconsistent Extrusion Issue](https://github.com/prusa3d/Prusa-Firmware/issues/602). Follow that link for example photos and more information. Basically, it leads to layer lines on the sides of your prints sticking out our being recessed in at spots which is very noticable. This is very hard to correct 100%, but there are some things you can do to help fix this problem a bit - those are listed below. The main cause of this issue is inadequate heatbreak cooling.
+
+* [Sunon Extruder Fan](https://all3dmakers.com/products/sunon-mk2-5-mk3-5v-hotend-cooling-fan). This is a replacement fan for the default Noctua fan that ships with the printer. It is much more powerful, at the expense of being louder. But it will help your 602 Issue very much by cooling your heatbreak much better!
+* [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It has better cooling for the heatbreak and will make your 602 Issue not as noticable. 
+* [Bondtech BMG Extruder](https://www.bondtech.se/en/product/prusa-i3-mk2-5-mk3-extruder-upgrade/). This is a whole new extruder  for your Mk3, and it's expensive. But because it has much better cooling than the stock extruder and a better gearing ratio, it has been shown to almost completely eliminate the 602 Issue.
+
+
 
 
 # Need More Help?
