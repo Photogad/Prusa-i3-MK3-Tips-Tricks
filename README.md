@@ -154,11 +154,17 @@ Below are mods I highly recommend you make or purchase for your Mk3. They will e
 
 There are many things you can do to your Prusa MK3 printer to make it print objects at higher quality. Mostly, it will be print settings in Slic3r that you will have to tweak with trial and error on a per object basis. But let's discuss acheiving better quality other ways!
 
+* Tensioning The Belts (WIP)
+* Lubricating The Bearings(WIP)
+* Buying Better Bearings (WIP)
+* And More (WIP)
+
 The Prusa printers are known to be cursed with a problem called the [602 Inconsistent Extrusion Issue](https://github.com/prusa3d/Prusa-Firmware/issues/602). Follow that link for example photos and more information. Basically, it leads to layer lines on the sides of your prints sticking out our being recessed in at spots which is very noticable. This is very hard to correct 100%, but there are some things you can do to help fix this problem a bit - those are listed below. The main cause of this issue is inadequate heatbreak cooling.
 
 * [Sunon Extruder Fan](https://all3dmakers.com/products/sunon-mk2-5-mk3-5v-hotend-cooling-fan). This is a replacement fan for the default Noctua fan that ships with the printer. It is much more powerful, at the expense of being louder. But it will help your 602 Issue very much by cooling your heatbreak much better!
-* [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It has better cooling for the heatbreak and will make your 602 Issue not as noticable. 
+* [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It has better cooling for the heatbreak and will make your 602 Issue not as noticable, as well as make the printer much easier to disassemble in the future for troubleshooting. 
 * [Bondtech BMG Extruder](https://www.bondtech.se/en/product/prusa-i3-mk2-5-mk3-extruder-upgrade/). This is a whole new extruder  for your Mk3, and it's expensive. But because it has much better cooling than the stock extruder and a better gearing ratio, it has been shown to almost completely eliminate the 602 Issue.
+* [Better Thermal Paste for your Heatbreak](https://www.amazon.com/Thermal-Grizzly-Kryonaut-Grease-Paste/dp/B011F7W3LU). Since we know that one of the leading causes of the 602 Issue is bad heatbreak cooling, it couldn't hurt to put a higher quality thermal paste on your heatbreak. Simply unscrew the heatsink from the heatbreak, remove the old thermal paste, and apply the new paste gingerly to the threads. This probably won't help a whole lot, but it can't hurt! The link above is for Thermal Grizzly Kryonaut paste which is very good and what I'm using, but if you want the very best paste look into something called CooLaboratory Liquid Pro - it's the very best paste you can buy, but very expensive.
 
 
 
