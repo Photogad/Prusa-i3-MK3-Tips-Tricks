@@ -24,6 +24,8 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 **Take Things To The Next Level**
 
+• [Put A Sock On It](#sock)
+
 • [My Optimized Startup GCODE](#gcode)
 
 • [Slic3r PE On Meth](#meth)
@@ -120,6 +122,10 @@ Before trying the steps below, make sure you have [calibrated your live Z correc
 
 I had major issues printing PETG using the default Prusa profiles - the infill would just crumble and break. After much trial and error, I discovered the only way to get it to print was to lower the infill speed down ridiculously low to like 15mms. Obviously, this was not preferred. But I was able to eventually get it solved! The easy solution is to just print at 265c for PETG. The Prusa default of 235c is too cold. As someone on the Prusa discord server said to me, "PETG likes it hot". This is absolutely true. After switching to 265c for PETG, it prints faster and more beautiful for me than ever before.
 
+# Put A Sock On It
+<a name="sock"/>
+
+I really recommend buying a pack of [silicone socks for the E3D hot end](https://e3d-online.com/v6-silicone-socks-pack-of-3). They are cheap, easy to install, and have several advantages! First of all, they help insulate your hot-end so it stays at a more stable temperature. Second, they make it so that melted plastic won't stick to your hot-end, so you won't have the "Blob of death" issue where you leave a print unattended for hours and come back to find a big blob of plastic stuck to your hot-end that is near impossible to remove. Although my temperatures are much more stable with one installed, I didn't really see an improvement in print quality, but a more stable temperature is never a bad thing.
 
 
 # My Optimized Startup GCODE
