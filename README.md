@@ -10,7 +10,7 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 • [Calibrating Live Z My Way](#livez)
 
-• [Calibrating Extruder idler Tension](#tension)
+• [Calibrating Extruder Idler Tension](#tension)
 
 • [Calibrating Extruder E-Steps](#esteps)
 
