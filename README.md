@@ -10,6 +10,8 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 • [Calibrating Live Z My Way](#livez)
 
+• [Calibrating Extruder E-Steps](#esteps)
+
 **Troubleshooting**
 
 • [First Layer Adhesion Issues And How To Fix Them](#flai)
@@ -49,6 +51,30 @@ Calibrating your Live Z is the most important thing you can do, because your fir
 5. Adjust the live Z number until each line that gets laid down has no gaps between it and the last one. You don't want to smush the plastic down too much where the plastic layer developes ridges in it, but really do not want any gaps. I would actually recommend starting at -0.300 and working your way up from there in -0.100 increments. Once you get to a number that looks good (it was -0.700 for me) you can adjust in smaller increments of -0.025 to get it perfect.
 6. If you use multiple nozzle sizes, be sure to make a calibration GCODE for each of your nozzles! I personally have a /calibration/ folder on my SD card and calibrate the live Z whenever I swap nozzles.
 
+# Calibrating Extruder E-Steps
+<a name="esteps"/>
+
+It's important that when you tell your printer to extrude 100mm of filament, it actually does extrude 100mm of filament. If it's extruding more than you request, it's over-extruding, and if it's extruding less than you request, it's under-extruding. Overextrusion can make for worse print quality on the ouside edges and cause bridges to sag too much, and under-extrusion can cause your prints to be weaker or not have proper infill. 
+
+This is all controlled in your printer firmware by a thing called E-Steps. By default, the Prusa MK3 E-Steps are set to 280, which should be perfect for most printers. But you should still double check it! Here's how:
+
+1. With filament loaded, move your extruder by hand so that it's directly below the filament spool and the filament is straight up and down.
+2. Measure 120mm from where the filament enters your extruder and put a mark 120mm up on the filament with a black sharpie marker.
+3. Connect the printer to your computer via USB, open Pronterface, and connect to the printer in Pronterface. 
+4. Preheat your printer, wait for extruder to be warmed up, and then use the extrude button and settings in Pronterface to extrude 100mm of filament at 100mm / minute. 
+5. Once it's done extruding, measure from the top of the extruder to the black mark you made. It should measure exactly 20mm, because you marked out 120mm but asked the printer to extrude 100mm.
+
+Did you get 20mm left? If so, great! If not, remember the amount you measured and follow the steps below to calibrate:
+
+1. Mark the filament again 120mm from the top of the extruder. 
+2. In pronterface, issue M503 command in the terminal. It should return steps value, you want to remember the one that says "EXXX" where XXX is the steps number for extruder. If you have never done this before, it should be 280. Those are your extruder steps value currently.
+3. Now subtract the amount that was left over from 120mm in the first instructions. So for example if you had 10mm left over instead of the correct 20mm, you would do 120-10=110. This means that your extruder actually extruded 110mm of filament when you asked it to do 100mm.
+4. Multiply your current extruder steps value by 100. So if it was at the default of 280, you would do 280x100=28000.
+5. Now divide that big number (28000 in example) by the real amount your extruder did. In above example, we said 110 so you would do 28000/110 = 254.54. This will be your new E-Steps value instead of 280. Now you need to actually change this value and save it in your firmware.
+6. In Pronterface terminal, issue command M92 EXXX.XX where the X's are your number. In above example, you would do M92 E254.54.
+7. Now issue command M500 to save it to your firmware, and you can also do M503 again to verify that the changes were saved.
+
+Your extruder should now be calibrated and pushing 100mm of filament when you ask for it. But you need to verify that it's correct now!  Just start these steps all over again and mark out the 120mm on the filament, and measure when it's done extruding. You should now have 20mm left when you asked it to extrude 100mm.
 
 # First Layer Adhesion Issues And How To Fix Them
 <a name="flai"/>
