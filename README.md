@@ -10,6 +10,8 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 • [Calibrating Live Z My Way](#livez)
 
+• [Calibrating Extruder idler Tension](#tension)
+
 • [Calibrating Extruder E-Steps](#esteps)
 
 **Troubleshooting**
@@ -50,6 +52,20 @@ Calibrating your Live Z is the most important thing you can do, because your fir
 4. Press the knob on the front of your printer and enter the live Z adjustment mode.
 5. Adjust the live Z number until each line that gets laid down has no gaps between it and the last one. You don't want to smush the plastic down too much where the plastic layer developes ridges in it, but really do not want any gaps. I would actually recommend starting at -0.300 and working your way up from there in -0.100 increments. Once you get to a number that looks good (it was -0.700 for me) you can adjust in smaller increments of -0.025 to get it perfect.
 6. If you use multiple nozzle sizes, be sure to make a calibration GCODE for each of your nozzles! I personally have a /calibration/ folder on my SD card and calibrate the live Z whenever I swap nozzles.
+
+# Calibrating Extruder Idler Tension
+<a name="tension"/>
+
+It's a good idea to make sure your idler in your extruder has proper tension - too loose and it won't grab the filament well enough, too tight and it will crush the filament and cause extrusion issues. It's very simple to get it tensioned properly!
+
+1. With filament loaded and printer preheated for your filament, undo the two screws (or one screw if you are using bear extruder) that hold the idler door in place. These are the screws with the springs on them.
+2. Swing the door open fully, make a black mark somewhere on the filament with a sharpie marker for visual reference.
+3. Make your printer move the extruder quite a bit, you can do this from inside the printer menu. At this point, the filament should not be moving even though your extruder motor is moving.
+4. Close the idler door lightly, and then start screwing the screws in slowly. You want to keep screwing them in until they JUST start to grab the filament and the filament starts moving and extruding.
+5. Once it has just grabbed the filament, tighten the screws just a bit more (a few more complete turns).
+
+Now your extruder idler should be properly tensioned!
+
 
 # Calibrating Extruder E-Steps
 <a name="esteps"/>
