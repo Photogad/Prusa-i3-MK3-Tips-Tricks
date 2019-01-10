@@ -8,11 +8,15 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 **Getting Up And Running**
 
+• [Spare Parts and Supplies You Should Order Immediately](#spares)
+
 • [Calibrating Live Z My Way](#livez)
 
 • [Calibrating Extruder Idler Tension](#tension)
 
 • [Calibrating Extruder E-Steps](#esteps)
+
+• [Tensioning Belts Properly](#tension)
 
 **Troubleshooting**
 
@@ -36,6 +40,16 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 
 
+# Spare Parts and Supplies You Should Order Immediately
+<a name="spares"/>
+
+The Prusa MK3 is a machine. Like all machines, it needs regular maintenance. Like all machines, it has parts that break with use and need replacement. Below is a list of parts and supplies I recommend you order right away and always have on hand, if you don't want to have 3D printing down-time.
+
+* [Part Cooling Fan](https://all3dmakers.com/products/mk3-part-cooling-fan). The wires on the part cooling fan are ridiculously fragile. I snapped mine right off just by bumping into them with my hand one time. And unless you are amazing at soldering, you can't fix them nor take the fans apart. Always have one of these in your spare parts bag! I also recommend dousing the wires with superglue where they connect to the fan body, it will help keep them from breaking off as easily in the future.
+* [Belts](https://all3dmakers.com/products/gates-ll-2gt-rf-6mm-width-2mm-pitch-for-mk3-mk2-5-belt-for-y-axis). Your belts will eventually break with wear and tear. Or maybe you overtighten them and cause them to break prematurely. Always keep one spare on hand for each axis! And always get genuine Gates LL-2GT belts. THESE ARE DIFFERENT THAN GATES GT2 BELTS. Confusing, I know. But the Gates 2GT belts are made specific to the 2GT idlers that Prusa uses, which are different than the GT2 belts and idlers. (note: link is for Y belt only).
+* [Powder Coated Sheet](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV). I highly recommend this aftermarket powder coated sheet, it's so much better than the smooth PEI sheet that ships with the Prusa MK3s (unless you were lucky to get the Prusa Powder Coated Sheet which is better). The PEI on your sheet will eventually wear out and it's a pain in the ass to install new PEI on it (though not impossible) so just better to have a spare metal sheet ready to go, in my opinion.
+* [Bearings](https://us.misumi-ec.com/vona2/detail/221000091803/?HissuCode=LM8UP&PNSearch=LM8UP&KWSearch=LM8UP&searchFlow=results2type). Your bearings are eventually going to go, and make your printer axis not glide smoothly and be noisy. The link are for Misumi LM8UP bearings, which are the highest quality bearings you can buy. They are even better than the LM8U Misumi bearings that many recommend to buy (the P stands for precision). 
+* [Super-Lube with PTFE](https://www.amazon.com/dp/B0081JE0OO/ref=twister_B07HLTTG9L?_encoding=UTF8&psc=1). You are going to need to grease your bearings and Z screws every now and then to keep things running smoothly. I high recommend this type of lube for the Prusa MK3. 
 
 
 
@@ -93,6 +107,20 @@ Did you get 20mm left? If so, great! If not, remember the amount you measured an
 7. Now issue command M500 to save it to your firmware, and you can also do M503 again to verify that the changes were saved.
 
 Your extruder should now be calibrated and pushing 100mm of filament when you ask for it. But you need to verify that it's correct now!  Just start these steps all over again and mark out the 120mm on the filament, and measure when it's done extruding. You should now have 20mm left when you asked it to extrude 100mm.
+
+# Tensioning Belts Properly
+<a name="tension"/>
+
+It's important your belts are all properly tensioned. Too tight, and you can get backlash (ugly prints), too loose and you can get shifted layer problems (also ugly prints). Now, the Prusa MK3 is kind of unique in that it can tell you what your belt tension is - sort of. To get your belt status numbers, you need to do a self-test (from the Calibration menu), and then after the self-test is done, it will update your belt status numbers which can be seen in the Support menu -> Belt Status. A lower number is a tighter belt, a higher number is a looser belt. Any time you want to get an updated belt status, you need to run self-test again from calibration menu.
+
+Now, the thing about the belt status info is that it doesn't actually measure your belt tension. It instead measures the resistance the X or Y motor encounters when trying to turn, and tries to make a guess at the belt tension. The problem with this is that there can be other factors at play that "fool" the numbers - like belts that are rubbing on the side of the plastic parts or pulleys (not aligned properly), or problems with the motors themselves. 
+
+Even worse is that there's a lot of misinformation out there about what the "perfect" belt status number is. I see 240 being floated around everywhere as the perfect number. That's what I tensioned my belts to. Worked fine for a while, but then one of them snapped on me. OUCH! Good thing I had a spare belt in my drawer.
+
+[Chris Warkocki](https://prusacommunity.com/your-belt-status-and-you/), a pretty big name in the Prusa community that I highly respect, suggests about 270 as being a perfect number for belt status. I don't fully disagree with this, but honestly I think relying on the belt status numbers is a fool's game because of the other variables I mentioned that can make these numbers inaccurate. Personally, I just tighten my belts until they feel tight. Your belts only need to be tight enough so that the teeth in the belts engage the teeth in the motor pulleys without slipping. If you are not getting layer shifting at all in your prints, chances are your belts are tight enough! 
+
+And it's better to have belts on the looser side than the tighter side, in my opinion. Having belts too tight makes it hard for the X and Y axis to move, which must surely put more strain on the motors, as well as decrease the life of the belts.
+
 
 # First Layer Adhesion Issues And How To Fix Them
 <a name="flai"/>
@@ -189,16 +217,11 @@ A wonderful github user named [Supermerill](https://github.com/supermerill) has 
 
 There are many things you can do to your Prusa MK3 printer to make it print objects at higher quality. Mostly, it will be print settings in Slic3r that you will have to tweak with trial and error on a per object basis. But let's discuss acheiving better quality other ways!
 
-* Tensioning The Belts (WIP)
-* Lubricating The Bearings(WIP)
-* Buying Better Bearings (WIP)
-* And More (WIP)
-
 The Prusa printers are known to be cursed with a problem called the [602 Inconsistent Extrusion Issue](https://github.com/prusa3d/Prusa-Firmware/issues/602). Follow that link for example photos and more information. Basically, it leads to layer lines on the sides of your prints sticking out our being recessed in at spots which is very noticable. This is very hard to correct 100%, but there are some things you can do to help fix this problem a bit - those are listed below. The main cause of this issue is inadequate heatbreak cooling.
 
 * [Sunon Extruder Fan](https://all3dmakers.com/products/sunon-mk2-5-mk3-5v-hotend-cooling-fan). This is a replacement fan for the default Noctua fan that ships with the printer. It is much more powerful, at the expense of being louder. But it will help your 602 Issue very much by cooling your heatbreak much better!
 * [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It has better cooling for the heatbreak and will make your 602 Issue not as noticable, as well as make the printer much easier to disassemble in the future for troubleshooting. 
-* [Bondtech BMG Extruder](https://www.bondtech.se/en/product/prusa-i3-mk2-5-mk3-extruder-upgrade/). This is a whole new extruder  for your Mk3, and it's expensive. But because it has much better cooling than the stock extruder and a better gearing ratio, it has been shown to almost completely eliminate the 602 Issue.
+* [Bondtech BMG Extruder](https://www.bondtech.se/en/product/prusa-i3-mk2-5-mk3-extruder-upgrade/). This is a whole new extruder  for your Mk3, and it's expensive. But because it has much better cooling than the stock extruder and a better gearing ratio, it has been shown to almost completely eliminate the 602 Issue and allows printing at higher resolution.
 * [Better Thermal Paste for your Heatbreak](https://www.amazon.com/Thermal-Grizzly-Kryonaut-Grease-Paste/dp/B011F7W3LU). Since we know that one of the leading causes of the 602 Issue is bad heatbreak cooling, it couldn't hurt to put a higher quality thermal paste on your heatbreak. Simply unscrew the heatsink from the heatbreak, remove the old thermal paste, and apply the new paste gingerly to the threads. This probably won't help a whole lot, but it can't hurt! The link above is for Thermal Grizzly Kryonaut paste which is very good and what I'm using, but if you want the very best paste look into something called CooLaboratory Liquid Pro - it's the very best paste you can buy, but very expensive.
 
 
@@ -210,6 +233,7 @@ Below are mods I highly recommend you make or purchase for your Mk3. They will e
 * [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It will increase your print quality, make it easy to tension your X axis belt, and also make your printer easier to take apart or fix in the future. I highly recommend it, but make sure to print a [compatible fan duct](https://www.thingiverse.com/thing:3320490) for it too!
 * [Taurus Y Axis](https://www.thingiverse.com/thing:3269389). This is a new Y motor mount and belt system, mostly all printable as well. It is much stronger than the default Y axis parts, and allows you to easily tension your Y axis belt. You may notice a slight increase in print quality with this.
 * [Mk3 Dust Filter](https://www.thingiverse.com/thing:2983334). Easily print and make a dust filter for your extruder. This will help prevent nozzle clogs from happening by filtering dust from your filament. This is only compatible with stock extruder, not bear extruder.
+* [Rigid Feet for MK3](https://www.thingiverse.com/thing:3082188). The rubber feet with the Prusa MK3 are great for making the printer slightly quieter, but upgrading to rigid feet (printable) will improve quality and help eliminate ringing and ghosting effects!
 * [Extruder Visualizer](https://www.thingiverse.com/thing:2638857). Decorate your extruder, but at the same time be able to see what your motor is doing. Great for troubleshooting extruder movements. There are many other design available on thingiverse, or you make your own. All you need is a magnet and some glue.
 * [E3D Nozzle Holder](https://www.thingiverse.com/thing:3280665). A great way to store your E3D nozzles if you have a bunch of them.
 * [E3D Nozzle Change Tool](https://www.thingiverse.com/thing:3277211). Change your nozzles very easily if you have multiple nozzles.
