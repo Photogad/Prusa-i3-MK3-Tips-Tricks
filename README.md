@@ -10,13 +10,14 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 • [Spare Parts and Supplies You Should Order Immediately](#spares)
 
+• [Tensioning Belts Properly](#tension)
+
 • [Calibrating Live Z My Way](#livez)
 
 • [Calibrating Extruder Idler Tension](#tension)
 
 • [Calibrating Extruder E-Steps](#esteps)
 
-• [Tensioning Belts Properly](#tension)
 
 **Troubleshooting**
 
@@ -51,7 +52,22 @@ The Prusa MK3 is a machine. Like all machines, it needs regular maintenance. Lik
 * [Bearings](https://us.misumi-ec.com/vona2/detail/221000091803/?HissuCode=LM8UP&PNSearch=LM8UP&KWSearch=LM8UP&searchFlow=results2type). Your bearings are eventually going to go, and make your printer axis not glide smoothly and be noisy. The link are for Misumi LM8UP bearings, which are the highest quality bearings you can buy. They are even better than the LM8U Misumi bearings that many recommend to buy (the P stands for precision). 
 * [Super-Lube with PTFE](https://www.amazon.com/dp/B0081JE0OO/ref=twister_B07HLTTG9L?_encoding=UTF8&psc=1). You are going to need to grease your bearings and Z screws every now and then to keep things running smoothly. I high recommend this type of lube for the Prusa MK3. 
 
+# Tensioning Belts Properly
+<a name="tension"/>
 
+It's important your belts are all properly tensioned. Too tight, and you can get backlash (ugly prints), too loose and you can get shifted layer problems (also ugly prints). Now, the Prusa MK3 is kind of unique in that it can tell you what your belt tension is - sort of. To get your belt status numbers, you need to do a self-test (from the Calibration menu), and then after the self-test is done, it will update your belt status numbers which can be seen in the Support menu -> Belt Status. A lower number is a tighter belt, a higher number is a looser belt. Any time you want to get an updated belt status, you need to run self-test again from calibration menu.
+
+Now, the thing about the belt status info is that it doesn't actually measure your belt tension. It instead measures the resistance the X or Y motor encounters when trying to turn, and tries to make a guess at the belt tension. The problem with this is that there can be other factors at play that "fool" the numbers - like belts that are rubbing on the side of the plastic parts or pulleys (not aligned properly), or problems with the motors themselves. 
+
+Even worse is that there's a lot of misinformation out there about what the "perfect" belt status number is. I see 240 being floated around everywhere as the perfect number. That's what I tensioned my belts to. Worked fine for a while, but then one of them snapped on me. OUCH! Good thing I had a spare belt in my drawer.
+
+[Chris Warkocki](https://prusacommunity.com/your-belt-status-and-you/), a pretty big name in the Prusa community that I highly respect, suggests about 270 as being a perfect number for belt status. I don't fully disagree with this, but honestly I think relying on the belt status numbers is a fool's game because of the other variables I mentioned that can make these numbers inaccurate. Personally, I just tighten my belts until they feel tight. Your belts only need to be tight enough so that the teeth in the belts engage the teeth in the motor pulleys without slipping. If you are not getting layer shifting at all in your prints, chances are your belts are tight enough! 
+
+And it's better to have belts on the looser side than the tighter side, in my opinion. Having belts too tight makes it hard for the X and Y axis to move, which must surely put more strain on the motors, as well as decrease the life of the belts.
+
+Ok wait, so how do you actually tension your belts? Well, on the stock MK3 it's kind of hard to do. The X axis has a built-in tensioning screw which is kind of a pain in the ass to really use, and if you tighten it too much it will crack your X axis end printed part (happened to me). So you can use this (follow the Prusa manual) but be very careful. Also, don't expect it to actually tension your X belt too much.  For the Y belt, the only method on stock MK3 to tension it is to loosen the screws that hold the Y belt pulley to the front of the frame, put your belt as tight as possible by hand into the belt grooves on the bottom of the bed, and then tighten the screws in the pulley to pull it tighter. Again, this method really sucks and doesn't allow you to tighten the belt very much.
+
+A much better thing to do is just take the time to upgrade your whole extruder and X axis to the [Bear X axis and Extruder](https://www.thingiverse.com/thing:3226689), and upgrade your Y axis to the [Taurus Y axis](https://www.thingiverse.com/thing:3269389). This will require a lot of printing of parts and a few extra hardware supplies, but it's highly worth it for many reasons, one of them beign how easily and convenient they will make it to tension your belts in the future.
 
 # Calibrating Live Z My Way
 <a name="livez"/>
@@ -108,18 +124,6 @@ Did you get 20mm left? If so, great! If not, remember the amount you measured an
 
 Your extruder should now be calibrated and pushing 100mm of filament when you ask for it. But you need to verify that it's correct now!  Just start these steps all over again and mark out the 120mm on the filament, and measure when it's done extruding. You should now have 20mm left when you asked it to extrude 100mm.
 
-# Tensioning Belts Properly
-<a name="tension"/>
-
-It's important your belts are all properly tensioned. Too tight, and you can get backlash (ugly prints), too loose and you can get shifted layer problems (also ugly prints). Now, the Prusa MK3 is kind of unique in that it can tell you what your belt tension is - sort of. To get your belt status numbers, you need to do a self-test (from the Calibration menu), and then after the self-test is done, it will update your belt status numbers which can be seen in the Support menu -> Belt Status. A lower number is a tighter belt, a higher number is a looser belt. Any time you want to get an updated belt status, you need to run self-test again from calibration menu.
-
-Now, the thing about the belt status info is that it doesn't actually measure your belt tension. It instead measures the resistance the X or Y motor encounters when trying to turn, and tries to make a guess at the belt tension. The problem with this is that there can be other factors at play that "fool" the numbers - like belts that are rubbing on the side of the plastic parts or pulleys (not aligned properly), or problems with the motors themselves. 
-
-Even worse is that there's a lot of misinformation out there about what the "perfect" belt status number is. I see 240 being floated around everywhere as the perfect number. That's what I tensioned my belts to. Worked fine for a while, but then one of them snapped on me. OUCH! Good thing I had a spare belt in my drawer.
-
-[Chris Warkocki](https://prusacommunity.com/your-belt-status-and-you/), a pretty big name in the Prusa community that I highly respect, suggests about 270 as being a perfect number for belt status. I don't fully disagree with this, but honestly I think relying on the belt status numbers is a fool's game because of the other variables I mentioned that can make these numbers inaccurate. Personally, I just tighten my belts until they feel tight. Your belts only need to be tight enough so that the teeth in the belts engage the teeth in the motor pulleys without slipping. If you are not getting layer shifting at all in your prints, chances are your belts are tight enough! 
-
-And it's better to have belts on the looser side than the tighter side, in my opinion. Having belts too tight makes it hard for the X and Y axis to move, which must surely put more strain on the motors, as well as decrease the life of the belts.
 
 
 # First Layer Adhesion Issues And How To Fix Them
