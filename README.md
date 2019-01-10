@@ -35,9 +35,9 @@ Resources for Prusa i3 Mk3 Printer. The following information are things that I 
 
 • [Slic3r PE On Meth](#meth)
 
-• [Achieving Better Print Quality](#quality)
+• [Achieving Better Print Quality Through Hardware Upgrades](#quality)
 
-• [Recommended Mods For Your Mk3](#mods)
+• [Recommended Printable Mods For Your Mk3](#mods)
 
 
 
@@ -49,7 +49,7 @@ The Prusa MK3 is a machine. Like all machines, it needs regular maintenance. Lik
 * [Part Cooling Fan](https://all3dmakers.com/products/mk3-part-cooling-fan). The wires on the part cooling fan are ridiculously fragile. I snapped mine right off just by bumping into them with my hand one time. And unless you are amazing at soldering, you can't fix them nor take the fans apart. Always have one of these in your spare parts bag! I also recommend dousing the wires with superglue where they connect to the fan body, it will help keep them from breaking off as easily in the future.
 * [Belts](https://all3dmakers.com/products/gates-ll-2gt-rf-6mm-width-2mm-pitch-for-mk3-mk2-5-belt-for-y-axis). Your belts will eventually break with wear and tear. Or maybe you overtighten them and cause them to break prematurely. Always keep one spare on hand for each axis! And always get genuine Gates LL-2GT belts. THESE ARE DIFFERENT THAN GATES GT2 BELTS. Confusing, I know. But the Gates 2GT belts are made specific to the 2GT idlers that Prusa uses, which are different than the GT2 belts and idlers. (note: link is for Y belt only).
 * [Powder Coated Sheet](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV). I highly recommend this aftermarket powder coated sheet, it's so much better than the smooth PEI sheet that ships with the Prusa MK3s (unless you were lucky to get the Prusa Powder Coated Sheet which is better). The PEI on your sheet will eventually wear out and it's a pain in the ass to install new PEI on it (though not impossible) so just better to have a spare metal sheet ready to go, in my opinion.
-* [Bearings](https://us.misumi-ec.com/vona2/detail/221000091803/?HissuCode=LM8UP&PNSearch=LM8UP&KWSearch=LM8UP&searchFlow=results2type). Your bearings are eventually going to go, and make your printer axis not glide smoothly and be noisy. The link are for Misumi LM8UP bearings, which are the highest quality bearings you can buy. They are even better than the LM8U Misumi bearings that many recommend to buy (the P stands for precision). 
+* [Bearings](https://us.misumi-ec.com/vona2/detail/221000091803/?HissuCode=LM8UP&PNSearch=LM8UP&KWSearch=LM8UP&searchFlow=results2type). Your bearings are eventually going to go, and make your printer axis not glide smoothly and be noisy. The link are for Misumi LM8UP bearings, which are the highest quality bearings you can buy. They are even better than the LM8U Misumi bearings that many recommend to buy (the P stands for precision). You need to make sure to grease them when you get them, they come un-greased! Use [this printed tool](https://www.thingiverse.com/thing:1128781) to grease your bearings with [Super-Lube PTFE](https://www.amazon.com/dp/B0081JE0OO/ref=twister_B07HLTTG9L?_encoding=UTF8&psc=1).
 * [Super-Lube with PTFE](https://www.amazon.com/dp/B0081JE0OO/ref=twister_B07HLTTG9L?_encoding=UTF8&psc=1). You are going to need to grease your bearings and Z screws every now and then to keep things running smoothly. I high recommend this type of lube for the Prusa MK3. 
 
 # Tensioning Belts Properly
@@ -174,32 +174,32 @@ M106 S255 ; turn on fan to cool PINDA
 M860 S35 ; wait until PINDA is <= 35C
 M106 S0 ; Turn cooling fan off if PINDA is cooled
 
-; Standardized bed temp and nozzle preheating
-M104 S150 ;preheat nozzle temp for no-ooze and heat up PINDA in the process
-M140 S65 ; Set standardized bed temp for mesh leveling and heat up PINDA in the process
+; PINDA warming and Nozzle Preheating
+M104 S170 ; preheat nozzle temp for no-ooze and heat up PINDA in the process
+M140 S70 ; heat up PINDA quicker by heating bed to hotter temperature
 G28 W ; go home without mesh bed leveling
 
-
 ; Mesh bed leveling with standardized bed temp and warm PINDA
-M190 S65 ; wait for bed temp to finish
 M860 S35 ; wait until PINDA is >= 35C
-G80 ; mesh bed leveling
+M140 S65 ; set standardized bed temp for mesh leveling
+M190 R65 ; wait for bed temp to finish
+G80 ; mesh bed leveling @ 65c bed temp across all filament types. Do your first layer calibration at this temp!
 
 ; Goto start corner and come up to final temp
 G1 Y-3.0 F1000.0 ; go outside print area
 M106 S255 ; Turn cooling fan on to prevent oozing and make purge line easier to remove
 M104 S[first_layer_temperature] ; set extruder temp for printing
 M140 S[first_layer_bed_temperature] ; set bed temp for printing
-M109 S[first_layer_temperature] ; wait for extruder temp
-M190 S[first_layer_bed_temperature] ; wait for bed temp to finish
+M109 R[first_layer_temperature] ; wait for extruder temp
+M190 R[first_layer_bed_temperature] ; wait for bed temp to finish
 
 ; Start the improved purge line
 G92 E0.0 ; reset extrusion distance
 G1 E2 F1000 ; de-retract and push ooze
+M106 S0 ; Turn cooling fan off now for enough time to stop spinning
 G1 X20.0 E6  F1000.0 ; fat 20mm intro line @ 0.30
 G1 X60.0 E3.2  F1000.0 ; thin +40mm intro line @ 0.08
 G1 X100.0 E6  F1000.0 ; fat +40mm intro line @ 0.15
-M106 S0 ; Turn cooling fan off now for enough time to stop spinning
 G1 E-0.8 F2100; retract to avoid stringing
 G1 X99.0 E0 F1000.0 ; -1mm intro line @ 0.00
 G1 X110.0 E0 F1000.0 ; +10mm intro line @ 0.00
@@ -207,7 +207,7 @@ G1 E0.6 F1500; de-retract
 G92 E0.0
 
 ; And a beep to let us know the print is starting!
-M300 S100 P10 ; chirp
+M300 S100 P10 ; chirp - optional
 ```
 
 
@@ -216,28 +216,31 @@ M300 S100 P10 ; chirp
 
 A wonderful github user named [Supermerill](https://github.com/supermerill) has created a custom version of Slic3r PE called [Slic3r++](https://github.com/supermerill/Slic3r). I highly recommend using this version, because it has a lot of new features that the official Slic3r PE is lacking, such as but not limited to top surface ironing, XY hole compensation, continuous perimeter loops, interior top layer supports, avoiding unsupported perimeters, and more! Supermerill  keeps his version current with the latest release of Slic3r PE (so you won't miss out on anything from the main version!) and he's really smart (he's actually the guy that invented Gyroid infill). 
 
-# Achieving Better Print Quality
+# Achieving Better Print Quality Through Hardware Upgrades
 <a name="quality"/>
 
-There are many things you can do to your Prusa MK3 printer to make it print objects at higher quality. Mostly, it will be print settings in Slic3r that you will have to tweak with trial and error on a per object basis. But let's discuss acheiving better quality other ways!
+There are many things you can do to your Prusa MK3 printer to make it print objects at higher quality. Mostly, it will be print settings in Slic3r that you will have to tweak with trial and error on a per object basis. But let's discuss acheiving better quality with better hardware!
 
 The Prusa printers are known to be cursed with a problem called the [602 Inconsistent Extrusion Issue](https://github.com/prusa3d/Prusa-Firmware/issues/602). Follow that link for example photos and more information. Basically, it leads to layer lines on the sides of your prints sticking out our being recessed in at spots which is very noticable. This is very hard to correct 100%, but there are some things you can do to help fix this problem a bit - those are listed below. The main cause of this issue is inadequate heatbreak cooling.
 
-* [Sunon Extruder Fan](https://all3dmakers.com/products/sunon-mk2-5-mk3-5v-hotend-cooling-fan). This is a replacement fan for the default Noctua fan that ships with the printer. It is much more powerful, at the expense of being louder. But it will help your 602 Issue very much by cooling your heatbreak much better!
-* [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It has better cooling for the heatbreak and will make your 602 Issue not as noticable, as well as make the printer much easier to disassemble in the future for troubleshooting. 
+There are also other hardware upgrades listed below that not only correct the 602 issue, but also improve print quality in other ways. I ordered them from what I believe to have the biggest affect on print quality to least.
+
 * [Bondtech BMG Extruder](https://www.bondtech.se/en/product/prusa-i3-mk2-5-mk3-extruder-upgrade/). This is a whole new extruder  for your Mk3, and it's expensive. But because it has much better cooling than the stock extruder and a better gearing ratio, it has been shown to almost completely eliminate the 602 Issue and allows printing at higher resolution.
+* [Sunon Extruder Fan](https://all3dmakers.com/products/sunon-mk2-5-mk3-5v-hotend-cooling-fan). This is a replacement fan for the default Noctua fan that ships with the printer. It is much more powerful, at the expense of being louder. But it will help your 602 Issue very much by cooling your heatbreak much better! I highly recommend this fan to replace the stock fan.
+* [Misumi LM8UP Bearings](https://us.misumi-ec.com/vona2/detail/221000091803/?HissuCode=LM8UP&PNSearch=LM8UP&KWSearch=LM8UP&searchFlow=results2type). These are arguably the best bearings available for your printer. They might increase print quality slightly, as well as make your printer slightly quieter. They will also last longer than the stock bearings that ship with the MK3. You need to make sure to grease them when you get them, they come un-greased! Use [this printed tool](https://www.thingiverse.com/thing:1128781) to grease your bearings with [Super-Lube PTFE](https://www.amazon.com/dp/B0081JE0OO/ref=twister_B07HLTTG9L?_encoding=UTF8&psc=1). You should also get matching Misumi rods (below)! You will need 3 bearings for the X axis, 3 bearings for the Y axis, and 4 bearings for the Z axis. However, X and Y axis are most important if you want to save some money, the Z axis is not as important.
+* [Misumi Rods](https://us.misumi-ec.com/vona2/detail/110302634310/?HissuCode=PSFU&PNSearch=PSFU&KWSearch=PSFU&searchFlow=results2type&curSearch=%7b%22field%22%3a%22%40search%22%2c%22seriesCode%22%3a%22110302634310%22%2c%22innerCode%22%3a%22%22%2c%22sort%22%3a1%2c%22specSortFlag%22%3a0%2c%22allSpecFlag%22%3a0%2c%22page%22%3a1%2c%22pageSize%22%3a%2260%22%2c%2200000028941%22%3a%22mig00000001498696%22%2c%2200000028938%22%3a%2200000028938.a!00001%22%2c%2200000028940%22%3a%22b%22%2c%2200000028942%22%3a%22e%22%2c%22typeCode%22%3a%22PSFU%22%2c%22fixedInfo%22%3a%22MDM00000529299110302634310-1518478229%7c13%22%7d&Tab=wysiwyg_area_0). These rods are more precise than the stock rods that ship with the Prusa MK3. They are matched to the Misumi bearings above. You will need a total of 6, 2 of each of the following lengths: 320mm, 330mm, 370mm.
 * [Better Thermal Paste for your Heatbreak](https://www.amazon.com/Thermal-Grizzly-Kryonaut-Grease-Paste/dp/B011F7W3LU). Since we know that one of the leading causes of the 602 Issue is bad heatbreak cooling, it couldn't hurt to put a higher quality thermal paste on your heatbreak. Simply unscrew the heatsink from the heatbreak, remove the old thermal paste, and apply the new paste gingerly to the threads. This probably won't help a whole lot, but it can't hurt! The link above is for Thermal Grizzly Kryonaut paste which is very good and what I'm using, but if you want the very best paste look into something called CooLaboratory Liquid Pro - it's the very best paste you can buy, but very expensive.
 
 
-# Recommended Mods For Your Mk3
+# Recommended Printable Mods For Your Mk3
 <a name="mods"/>
 
-Below are mods I highly recommend you make or purchase for your Mk3. They will either make your life easier, or improve the quality of your prints. Maybe both.
+Below are mods I highly recommend you make for your MK3. They will either make your life easier, or improve the quality of your prints. Maybe both.
 
 * [Bear Extruder and X Axis](https://www.thingiverse.com/thing:3226689). This is a whole new extruder and X-axis for your Mk3, but everything is printable. It's a big project, but very much worth it. It will increase your print quality, make it easy to tension your X axis belt, and also make your printer easier to take apart or fix in the future. I highly recommend it, but make sure to print a [compatible fan duct](https://www.thingiverse.com/thing:3320490) for it too!
 * [Taurus Y Axis](https://www.thingiverse.com/thing:3269389). This is a new Y motor mount and belt system, mostly all printable as well. It is much stronger than the default Y axis parts, and allows you to easily tension your Y axis belt. You may notice a slight increase in print quality with this.
-* [Mk3 Dust Filter](https://www.thingiverse.com/thing:2983334). Easily print and make a dust filter for your extruder. This will help prevent nozzle clogs from happening by filtering dust from your filament. This is only compatible with stock extruder, not bear extruder.
 * [Rigid Feet for MK3](https://www.thingiverse.com/thing:3082188). The rubber feet with the Prusa MK3 are great for making the printer slightly quieter, but upgrading to rigid feet (printable) will improve quality and help eliminate ringing and ghosting effects!
+* [Mk3 Dust Filter](https://www.thingiverse.com/thing:2983334). Easily print and make a dust filter for your extruder. This will help prevent nozzle clogs from happening by filtering dust from your filament. This is only compatible with stock extruder, not bear extruder.
 * [Extruder Visualizer](https://www.thingiverse.com/thing:2638857). Decorate your extruder, but at the same time be able to see what your motor is doing. Great for troubleshooting extruder movements. There are many other design available on thingiverse, or you make your own. All you need is a magnet and some glue.
 * [E3D Nozzle Holder](https://www.thingiverse.com/thing:3280665). A great way to store your E3D nozzles if you have a bunch of them.
 * [E3D Nozzle Change Tool](https://www.thingiverse.com/thing:3277211). Change your nozzles very easily if you have multiple nozzles.
