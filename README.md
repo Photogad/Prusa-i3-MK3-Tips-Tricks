@@ -63,7 +63,7 @@ Even worse is that there's a lot of misinformation out there about what the "per
 
 [Chris Warkocki](https://prusacommunity.com/your-belt-status-and-you/), a pretty big name in the Prusa community that I highly respect, suggests about 270 as being a perfect number for belt status. I totally agree with this, 270 gives me the best results. But just be careful about these numbers. Like I said, the numbers reported on the printer aren't totally accurate. Right now my X belt is reporting 266 and my Y belt is reporting 278, but I can feel for sure that my Y belt is actually tighter. 
 
-So just be very careful about overtightening the belts!
+So just be very careful about overtightening the belts! You only need your belts tight enough so that the teeth stay engaged in the pulleys without slipping. There is no benefit to having belts tighter than that.
 
 And it's better to have belts on the looser side than the tighter side, in my opinion. Having belts too tight makes it hard for the X and Y axis to move, which must surely put more strain on the motors, as well as decrease the life of the belts.
 
