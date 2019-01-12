@@ -41,6 +41,8 @@ The following informations are things that I have learned from my 3D printing jo
 
 • [Using Different Nozzles For Different Results and Speeds](#nozzles)
 
+• [Properly Changing Nozzles](#nozzlechange)
+
 • [Achieving Better Print Quality Through Hardware Upgrades](#quality)
 
 • [Recommended Printable Mods For Your Mk3](#mods)
@@ -280,6 +282,8 @@ With a smaller nozzle, you are able to print much more small or detailed objects
 With a larger nozzle, you can print quicker (because your nozzle is laying down wider lines of plastic); and because the lines are thicker, your functional parts will be stronger.
 
 Using a 0.80mm nozzle, you can print almost twice as quick as the standard 0.40mm nozzle - your 16 hour print can now take only 8 hours! That's a great time savings. But why don't I recommend the 1.00mm nozzle? Because the stock E3D v6 hotend can only melt plastic so fast and push it through the nozzle so fast, and in order to use the 1.00mm nozzle you have to drastically lower your print speeds in Slic3r, which negates the time savings of using a larger nozzle. The only reason at all I would recommend using the 1.00mm nozzle is to make the strongest parts possible. If you upgrade your hot-end to an E3D volcano hot-end, you can use the 1.00mm nozzle efficiently (and even print with the other nozzles at faster speeds), but it requires a lot of tinkering and modding of your printer that I don't want to write about. ;)
+
+<a name="nozzlechange"/>
 
 **So how do you change nozzles the proper way once you have them?**
 
