@@ -43,6 +43,7 @@ The following informations are things that I have learned from my 3D printing jo
 
 
 <a name="spares"/>
+
 # Spare Parts and Supplies You Should Order Immediately
 
 The Prusa MK3 is a machine. Like all machines, it needs regular maintenance. Like all machines, it has parts that break with use and need replacement. Below is a list of parts and supplies I recommend you order right away and always have on hand, if you don't want to have 3D printing down-time.
