@@ -228,6 +228,7 @@ G92 E0.0
 ; And a beep to let us know the print is starting!
 M300 S100 P10 ; chirp - optional
 ```
+Note: Improved purge line taken from [Bob's Project Notebook](http://projects.ttlexceeded.com/)'s custom gcode.
 
 <a name="7x7"/>
 
@@ -288,11 +289,21 @@ Below are mods I highly recommend you make for your MK3. They will either make y
 
 # Need More Help?
 
+Read Bob's Project Notebook:
+
+http://projects.ttlexceeded.com/
+
+
 Check out the Prusa Owner's Wiki:
 
 https://github.com/mcm001/prusaOwnersWiki
 
 
-Or ask a question in the 602 Wasteland Discord Chat:
+Post on Reddit:
+
+https://www.reddit.com/r/prusa3d/
+
+
+Or ask a question in the 602 Wasteland Discord Chat for more immediate help:
 
 https://discord.gg/hYUjSnW
