@@ -39,6 +39,8 @@ The following informations are things that I have learned from my 3D printing jo
 
 • [Slic3r PE On Meth](#meth)
 
+• [Using Different Nozzles For Different Results and Speeds](#nozzles)
+
 • [Achieving Better Print Quality Through Hardware Upgrades](#quality)
 
 • [Recommended Printable Mods For Your Mk3](#mods)
@@ -265,6 +267,43 @@ To actually use the 7x7 mesh bed leveling, you have to insert the M80 N7 gcode c
 # Slic3r PE On Meth
 
 A wonderful github user named [Supermerill](https://github.com/supermerill) has created a custom version of Slic3r PE called [Slic3r++](https://github.com/supermerill/Slic3r). I highly recommend using this version, because it has a lot of new features that the official Slic3r PE is lacking, such as but not limited to top surface ironing, XY hole compensation, continuous perimeter loops, interior top layer supports, avoiding unsupported perimeters, and more! Supermerill  keeps his version current with the latest release of Slic3r PE (so you won't miss out on anything from the main version!) and he's really smart (he's actually the guy that invented Gyroid infill). 
+
+
+<a name="nozzles"/>
+
+# Using Different Nozzles For Different Results And Speeds
+
+One of the best things you can do with 3D printing is using different sized nozzles. The stock Prusa MK3 comes with only a 0.40mm nozzle, but you can get nozzles in a range from 0.15mm to 1.00mm. Using a bigger nozzle will allow you to print things faster and create stronger functional parts, but printing with a smaller nozzle will allow you to print finer details and make nicer looking prints at the expense of speed. I personally recommend buying 0.15, 0.25, 0.60, and 0.80 only (in addition to your 0.40) for a total of 5 different nozzles. I also recommend buying only genuine E3D nozzles (is it worth it to buy a cheap knock-off brand to save only a dollar or two?) and I recommend buying only [hardened steel](https://e3d-online.com/hardened-steel-nozzles-v6) (or better yet, [Nozzle X](https://e3d-online.com/blog/?p=1006)) nozzles so that you can print with abrasive filament such as wood-fill or carbon fiber (these materials will damage regular brass nozzles).
+
+With a smaller nozzle, you are able to print much more small or detailed objects. They are really great for making tiny miniature figurines with very great detail! But the 0.25mm and 0.15mm nozzles print things very slow - a 3 hour print on the 0.40mm nozzle could take as long as 15 hours with the 0.15mm nozzle! So I really recommend using these smaller nozzles only for very small prints, or prints that you absolutely need the best detail for.
+
+With a larger nozzle, you can print quicker (because your nozzle is laying down wider lines of plastic) and because the lines are thicker your functional parts will be stronger.
+
+Using a 0.80mm nozzle, you can print almost twice as quick as the standard 0.40mm nozzle - your 16 hour print can now take only 8 hours! That's a great time savings. But why don't I recommend the 1.00mm nozzle? Because the stock E3D v6 hotend can only melt plastic so fast and push it through the nozzle so fast, and in order to use the 1.00mm nozzle you have to drastically lower your print speeds in Slic3r, which negates the time savings of using a larger nozzle. The only reason at all I would recommend using the 1.00mm nozzle is to make the strongest parts possible. If you upgrade your hot-end to an E3D volcano hot-end, you can use the 1.00mm nozzle efficiently (and even print with the other nozzles at faster speeds) but it requires a lot of tinkering and modding of your printer that I don't want to write about. ;)
+
+**So how do you change nozzles the proper way once you have them?**
+
+Changing your nozzles seems very complicated, but with practice and the right tools, you can do it in 2 minutes flat like I do. I'm so good at it now that I usually change nozzles before each print depending on what I'm printing! Before starting, I recommend getting and making the following tools:
+
+* [16mm Spanner Wrench](https://www.amazon.com/TEKTON-16-Combination-Wrench-18286/dp/B00Q01OBS0/ref=sr_1_3?rps=1&ie=UTF8&qid=1547272866&sr=8-3&keywords=16mm+wrench&refinements=p_85%3A2470955011). You will use this to hold your heat block in place. You can also use needle nose pliers but the wrench is much better.
+* [E3D Nozzle Change Tool](https://www.thingiverse.com/thing:3277211). You can print and make this tool - I highly recommend it! Or you can just use the standard [7mm E3D spanner](https://e3d-online.com/e3d-7mm-nozzle-spanner) instead, but it's a bit slower to use.
+* [E3D Nozzle Holder](https://www.thingiverse.com/thing:3280665). Optional, but a nozzle holder you can print to safely store all of your nozzles.
+
+Once you have those items, you can change your nozzle! Just do the following steps:
+
+1. Preheat your printer for the filament currently loaded, and once it's preheated, unload the filament. Skip this step obviously if no filament is loaded.
+2. Now carefully remove your front print fan by releasing it's screws, and tuck your print fan between the X axis belts. Be very careful, the wires on the print fan are fragile and can break if you are not careful.
+3. Remove the fan duct that the front print fan was sitting in by releasing it's screw.
+4. Now heat your nozzle up to 280c and wait for it to come up to temp. This is an important step because you never want to screw and unscrew the nozzles while the heat block is cold, and you want to do it when the heatblock is past it's thermal expansion temperature, which is about 270-275c for the stock aluminum heat block.
+5. Place a soft cloth or rag on your print bed.
+6. This thing is **HOT**, SO BE CAREFUL. Take your 16mm spanner wrench (or needle nose pliers) and put a firm grip on the front of the heatblock so it cannot twist while you are unscrewing your nozzle. Be very careful where you place the wrench on the heatblock so you are not close to the wires (the wires are very fragile).
+7. Using your E3D Nozzle Change Tool or 7mm spanner, put it on the hex part (6-sided flats) at the top of the nozzle and unscrew it by turning it counter-clockwise. You will have to unscrew it quite a bit before it comes out all the way. It might fall and hit your print bed, which is why I recommend putting the cloth or rag down to protect it. If you are using the 7mm spanner, this will definitely happen so also be careful of your fingers because the nozzle will burn you if it touches your hand when it falls. This is why I highly recommend using hte E3D Nozzle Change Tool because it will support the nozzle on the bottom and prevent it from falling.
+8. Make sure you are gripping the heatblock with the 16mm wrench again so it does not turn or twise.
+9. Now screw the new nozzle in, clockwise. You want it to be snug, but don't overtighten it or you can break the heatbreak inside the hot end.
+10. Finally, re-install your fan duct and front print fan in the reverse order you took them apart, and cool down your printer.
+
+You have now successfully installed a new nozzle.  Be sure when slicing new prints, you are using correct nozzle side settings! Slic3r PE comes with built-in profiles for 0.25, 0.40, and 0.60 nozzles, but if you are using another sized nozzle you can easily duplicate these profiles and set a new nozzle side under the "printer" tab in Slic3r PE.
+
 
 
 <a name="quality"/>
