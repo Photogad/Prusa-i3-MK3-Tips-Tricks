@@ -219,7 +219,7 @@ I had major issues printing PETG using the default Prusa profiles - the infill w
 
 PETG is notorious for sticking to the bed too much; and if you are not careful removing the print, you can damage the PEI sticker on your steel sheet. It's kind of the reverse problem of PLA - with PLA you want it to stick more, with PETG you want it to stick less.
 
-But there's two simple solutions, and I recommend the third and fourth ones the most.
+But there's four different solutions, and I recommend the third and fourth ones the most.
 
 1. Wipe some nose grease off of your face and rub it onto the bed. The oils from your face will make the PETG stick less. However, if you can do this easily, you are probably a nasty person that never showers or washes their face, so please shower and scrube more often.
 2. Wipe the steel sheet with a glue stick (Prusa includes this with the printer). The Glue stick helps PLA stick to bed more, but for PETG is has the reverse effect and actually makes PETG stick less. However, glue stick is messy and I really don't recommend it at all.
