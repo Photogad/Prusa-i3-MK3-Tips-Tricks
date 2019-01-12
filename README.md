@@ -12,6 +12,8 @@ The following informations are things that I have learned from my 3D printing jo
 
 • [Tensioning Belts Properly](#tension)
 
+• [Cleaning Your Bed](#cleaning)
+
 • [Calibrating Live Z My Way](#livez)
 
 • [Calibrating Extruder Idler Tension](#tension)
@@ -24,6 +26,8 @@ The following informations are things that I have learned from my 3D printing jo
 **Troubleshooting**
 
 • [First Layer Adhesion Issues And How To Fix Them](#flai)
+
+• [PETG Sticking To Bed Too Much](#petgstick)
 
 • [Problems Printing PETG Unless Very Slow Speed Used](#petg)
 
@@ -84,6 +88,22 @@ And it's better to have belts on the looser side than the tighter side, in my op
 Ok wait, so how do you actually tension your belts? Well, on the stock MK3 it's kind of hard to do. The X axis has a built-in tensioning screw which is kind of a pain in the ass to really use, and if you tighten it too much it will crack your X axis end printed part (happened to me). So you can use this (follow the Prusa manual) but be very careful. Also, don't expect it to actually tension your X belt too much.  For the Y belt, the only method on stock MK3 to tension it is to loosen the screws that hold the Y belt pulley to the front of the frame, put your belt as tight as possible by hand into the belt grooves on the bottom of the bed, and then tighten the screws in the pulley to pull it tighter. Again, this method really sucks and doesn't allow you to tighten the belt very much.
 
 A much better thing to do is just take the time to upgrade your whole extruder and X axis to the [Bear X axis and Extruder](https://www.thingiverse.com/thing:3226689), and upgrade your Y axis to the [Taurus Y axis](https://www.thingiverse.com/thing:3269389). This will require a lot of printing of parts and a few extra hardware supplies, but it's highly worth it for many reasons, one of them being how easily and convenient they will make it to tension your belts in the future.
+
+
+<a name="cleaning"/>
+
+# Cleaning Your Bed
+
+In this section, I'm going to tell you how to properly clean the steel sheet on your bed and address a lot of myths.
+
+First of all, yes, cleaning your bed frequently is important. Oils from your hands build up on the bed, and create adhesion issues where the PLA plastic does not want to stick to the bed. It's also very important to clean it before you do your first print because the steel sheet may have some machine oil on it (mine did) from the manufacturing process.
+
+Cleaning is simple - just wet an unscented paper towl with 91% or greater isopropyl alcohol available from most local drug stores, (but I highly recommend [99.9% isopropyl alcohol](https://www.amazon.com/MG-Chemicals-Isopropyl-Alcohol-Cleaner/dp/B0797BZDM5) for the best results) and rub the steel sheet on your bed SIDE TO SIDE (not circular motion) so that you wipe the oils off and not spread them around. Cleaning your steel sheet before your first ever print, and clean it before the first print of any day, should be frequently enough. It only takes 10 seconds to do and is worth it. Side note: 70% isopropyl alohol is actually much better at disinfecting wounds and cuts on your body which is why they sell it. ;)
+
+Occasionally, your steel sheet may become so dirty with oils that isopropyl alcohol just does not cut it. In this case, take the steel sheet off of your print bed, bring it to a sink, and scrub it with unscented dish soap. Then dry it. This is the best method to clean your steel sheet, but is kind of annoying to do!
+
+Keep in mind that if you are printing PETG and not PLA, you actually might want a dirtier sheet! PETG is notorious for sticking well (too well) to the steel sheet, and some people actually wipe nose grease (skin oil) onto the the steel sheet before printing PETG. However, a better solution is wiping the steel sheet with Windex (or any blue window cleaner) before printing PETG. It will help the PETG prints to release from the bed when they are done without damaging the PEI surface on your steel sheet. Just make sure to clean the bed again with isopropul alchol or unscented dish soap before printing PLA again!
+
 
 
 <a name="livez"/>
@@ -190,6 +210,20 @@ Before trying the steps below, make sure you have [calibrated your live Z correc
 # Problems Printing PETG Unless Very Slow Speed Used
 
 I had major issues printing PETG using the default Prusa profiles - the infill would just crumble and break. After much trial and error, I discovered the only way to get it to print was to lower the infill speed down ridiculously low to like 15mms. Obviously, this was not preferred. But I was able to eventually get it solved! The easy solution is to just print at 265c for PETG. The Prusa default of 235c is too cold. As someone on the Prusa discord server said to me, "PETG likes it hot". This is absolutely true. After switching to 265c for PETG, it prints faster and more beautiful for me than ever before.
+
+
+
+<a name="petgstick"/>
+
+# PETG Sticking To Bed Too Much
+
+PETG is notorious for sticking to the bed too much; and if you are not careful removing the print, you can damage the PEI sticker on your steel sheet. It's kind of the reverse problem of PLA - with PLA you want it to stick more, with PETG you want it to stick less.
+
+But there's two simple solutions, and I recommend the second one and third one the most.
+
+1. Wipe the steel sheet with a glue stick (Prusa includes this with the printer). The Glue stick helps PLA stick to bed more, but for PETG is has the reverse effect and actually makes PETG stick less. However, glue stick is messy and I really don't recommend it at all.
+2. Wipe the steel sheet with Windex (or any blue window cleaner). Although it doesn't keep the PETG from sticking quite as well as the glue stick, it's much easier to use and a lot less messy! And it works well enough for 99.9% of PETG prints (unless you are printing something very big with a lot of surface area on the bed).
+3. Buy a [powder coated sheet](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV). These sheets are much better than the smooth spring steel sheets. With a powder coated sheet, your PLA will stick more and your PETG will stick less. AWESOME!
 
 
 <a name="sock"/>
