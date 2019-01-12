@@ -42,9 +42,8 @@ The following informations are things that I have learned from my 3D printing jo
 • [Recommended Printable Mods For Your Mk3](#mods)
 
 
-
-# Spare Parts and Supplies You Should Order Immediately
 <a name="spares"/>
+# Spare Parts and Supplies You Should Order Immediately
 
 The Prusa MK3 is a machine. Like all machines, it needs regular maintenance. Like all machines, it has parts that break with use and need replacement. Below is a list of parts and supplies I recommend you order right away and always have on hand, if you don't want to have 3D printing down-time.
 
@@ -55,8 +54,8 @@ The Prusa MK3 is a machine. Like all machines, it needs regular maintenance. Lik
 * [Super-Lube with PTFE](https://www.amazon.com/dp/B0081JE0OO/ref=twister_B07HLTTG9L?_encoding=UTF8&psc=1). You are going to need to grease your bearings and Z screws every now and then to keep things running smoothly. I high recommend this type of lube for the Prusa MK3. 
 * 16x16x2" Concrete Paver (Stepping Stone). This is a thick, heavy slab of rock to put underneath your printer, for several benefits. First of all, your printer is basically an open oven - your hotend will heat up to sometimes 300c depending on what you are printing (that's nearly 600 degrees fahrenheit!). Although most of that heat is just happening in the nozzle and not near your surface, it's much safer to have this very hot thing that melts plastic into lava on a concrete surface that is fire-resistant instead of a wooden desk or workbench, just in case something happens and a fire gets started. But just as importantly, you are giving your printer a much more firm and stable surface with no vibrations, which will improve your print quality immensely and eliminate ghosting and ringing effects in your print quite a bit. Even with my printer on a very heavy duty oak wooden desk before, I saw a noticable difference in print quality. It's best to source one of these very large and heavy concrete pavers from your local hardware store - I got mine for only $2. Buying them online and paying for shipping is much more expensive, which is why I didn't share a link to one. Make sure to get one with a smooth flat surface, and not one with a brick or tile pattern that has grooves and ridges, because you want your printer to be level. Speaking of level - be sure your paver is level! If not, use a shim under any of the corners to level it out.
 
-# Tensioning Belts Properly
 <a name="tension"/>
+# Tensioning Belts Properly
 
 It's important your belts are all properly tensioned. Too tight, and you can get backlash (ugly prints), too loose and you can get shifted layer problems (also ugly prints). Now, the Prusa MK3 is kind of unique in that it can tell you what your belt tension is - sort of. To get your belt status numbers, you need to do a self-test (from the Calibration menu), and then after the self-test is done, it will update your belt status numbers which can be seen in the Support menu -> Belt Status. A lower number is a tighter belt, a higher number is a looser belt. Any time you want to get an updated belt status, you need to run self-test again from calibration menu.
 
@@ -74,8 +73,9 @@ Ok wait, so how do you actually tension your belts? Well, on the stock MK3 it's 
 
 A much better thing to do is just take the time to upgrade your whole extruder and X axis to the [Bear X axis and Extruder](https://www.thingiverse.com/thing:3226689), and upgrade your Y axis to the [Taurus Y axis](https://www.thingiverse.com/thing:3269389). This will require a lot of printing of parts and a few extra hardware supplies, but it's highly worth it for many reasons, one of them being how easily and convenient they will make it to tension your belts in the future.
 
-# Calibrating Live Z My Way
+
 <a name="livez"/>
+# Calibrating Live Z My Way
 
 Calibrating your Live Z is the most important thing you can do, because your first layer is the most important layer and is what supports all of your other layers. Unfortunately, the Prusa Mk3's built-in live Z calibration has many flaws. For one, it only works with .40mm nozzle size (stock nozzle). Second, the little square it prints at the end for inspection is very small and prints too fast to make any last minute adjustments. I've found this to be the best way to Calibrate Live Z:
 
@@ -90,8 +90,9 @@ Calibrating your Live Z is the most important thing you can do, because your fir
 5. Adjust the live Z number until each line that gets laid down has no gaps between it and the last one. You don't want to smush the plastic down too much where the plastic layer developes ridges in it, but really do not want any gaps. I would actually recommend starting at -0.300 and working your way up from there in -0.100 increments. Once you get to a number that looks good (it was -0.700 for me) you can adjust in smaller increments of -0.025 to get it perfect.
 6. If you use multiple nozzle sizes, be sure to make a calibration GCODE for each of your nozzles! I personally have a /calibration/ folder on my SD card and calibrate the live Z whenever I swap nozzles.
 
-# Calibrating Extruder Idler Tension
+
 <a name="tension"/>
+# Calibrating Extruder Idler Tension
 
 It's a good idea to make sure your idler in your extruder has proper tension - too loose and it won't grab the filament well enough, too tight and it will crush the filament and cause extrusion issues. It's very simple to get it tensioned properly!
 
@@ -104,8 +105,8 @@ It's a good idea to make sure your idler in your extruder has proper tension - t
 Now your extruder idler should be properly tensioned!
 
 
-# Calibrating Extruder E-Steps
 <a name="esteps"/>
+# Calibrating Extruder E-Steps
 
 It's important that when you tell your printer to extrude 100mm of filament, it actually does extrude 100mm of filament. If it's extruding more than you request, it's over-extruding, and if it's extruding less than you request, it's under-extruding. Overextrusion can make for worse print quality on the ouside edges and cause bridges to sag too much, and under-extrusion can cause your prints to be weaker or not have proper infill. 
 
@@ -130,9 +131,8 @@ Did you get 20mm left? If so, great! If not, remember the amount you measured an
 Your extruder should now be calibrated and pushing 100mm of filament when you ask for it. But you need to verify that it's correct now!  Just start these steps all over again and mark out the 120mm on the filament, and measure when it's done extruding. You should now have 20mm left when you asked it to extrude 100mm.
 
 
-
-# First Layer Adhesion Issues And How To Fix Them
 <a name="flai"/>
+# First Layer Adhesion Issues And How To Fix Them
 
 Before trying the steps below, make sure you have [calibrated your live Z correctly](#livez). Ignore the Prusa video where Josef says it should be a value of around -1.200. Your value will depend on how far up your PINDA is mounted and how thick your bed plate is. Your live Z value is adjusted properly when the lines of plastic that are laid down do not have any gaps in between them. If you think your live Z is adjusted properly, you may begin the following steps: 
 
@@ -154,19 +154,20 @@ Before trying the steps below, make sure you have [calibrated your live Z correc
 
 9. If all else fails, buy a powder coated sheet. You can get an aftermarket one on Amazon called [thekkiinngg v3](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV/ref=sr_1_1?s=hpc&ie=UTF8&qid=1546403022&sr=8-1&keywords=prusa+powder+coated) for $60. It's a bit pricey, but PLA sticks amazingly well to this sheet,  and I love the textured finish it gives my prints. Once Prusa begins selling their own powder coated sheets again, they will be a better option.
 
-# Problems Printing PETG Unless Very Slow Speed Used
 <a name="petg"/>
+# Problems Printing PETG Unless Very Slow Speed Used
 
 I had major issues printing PETG using the default Prusa profiles - the infill would just crumble and break. After much trial and error, I discovered the only way to get it to print was to lower the infill speed down ridiculously low to like 15mms. Obviously, this was not preferred. But I was able to eventually get it solved! The easy solution is to just print at 265c for PETG. The Prusa default of 235c is too cold. As someone on the Prusa discord server said to me, "PETG likes it hot". This is absolutely true. After switching to 265c for PETG, it prints faster and more beautiful for me than ever before.
 
-# Put A Sock On It
+
 <a name="sock"/>
+# Put A Sock On It
 
 I really recommend buying a pack of [silicone socks for the E3D hot end](https://e3d-online.com/v6-silicone-socks-pack-of-3). They are cheap, easy to install, and have several advantages! First of all, they help insulate your hot-end so it stays at a more stable temperature. Second, they make it so that melted plastic won't stick to your hot-end, so you won't have the "Blob of death" issue where you leave a print unattended for hours and come back to find a big blob of plastic stuck to your hot-end that is near impossible to remove. Although my temperatures are much more stable with one installed, I didn't really see an improvement in print quality, but a more stable temperature is never a bad thing.
 
 
-# My Optimized Startup GCODE
 <a name="gcode"/>
+# My Optimized Startup GCODE
 
 The following startup GCODE is my custom version which has several advantages over the default Prusa startup gcode. First, it waits until the PINDA is at or below 35c before it does anything, and it enables the print fan to help cool it down quicker in case it's already too warm. It then proceeds to preheat the nozzle to warm temperature (but not the actual print temperature) so that when the printer is doing the automated bed leveling, you do not get plastic leaking everywhere. It sets a standardized bed temp of 65c for the automated bed leveling procedure (change this to whatever bed temperature you do your live Z adjust at) because studies have shown that doing the mesh bed leveling at the same temperature that you did your live Z adjust will be the most accurate. Then, it warms up and waits for your PINDA to reach 35c because studies have also shown that the PINDA is the most accurate after it has warmed up to 35c or warmer and does the mesh bed leveling. Finally, it warms everything up to your real printing temperatures, turns the print fan on so you don't get any ooze, runs an advanced purge line that purges better and is easier to remove from your bed (PETG!), and finally your print begins. 
 
@@ -217,8 +218,8 @@ G92 E0.0
 M300 S100 P10 ; chirp - optional
 ```
 
-# 7x7 Mesh Bed Leveling
 <a name="7x7"/>
+# 7x7 Mesh Bed Leveling
 
 On the stock MK3, it does a 9-point mesh bed leveling before each print. With custom firmware, it's possible to do a 7x7 mesh leveling (49-point) mesh bed leveling procedure using custom start GCODE. The advantage of doing this is that it will lead to a much more level and accurate bed while printing, if your bed was not very level to begin with or if your steel build sheet has imperfections. The disadvantage to using this is that it will add about a minute to the start of your print, because it's takes longer for the nozzle to move to 49 points and measure them instead of only 9. Personally, I prefer waiting the extra minute to ensure I have a perfectly level bed!
 
@@ -228,13 +229,15 @@ To flash to this firmware, simply download the .hex firmware file, connect your 
 
 To actually use the 7x7 mesh bed leveling, you have to insert the M80 N7 gcode command somewhere before your print starts, using the custom start gcode window in Slic3r PE. Or, you can use [My Optimized Startup GCODE Script](#gcode) which already has the 7x7 built into it.
 
-# Slic3r PE On Meth
+
 <a name="meth"/>
+# Slic3r PE On Meth
 
 A wonderful github user named [Supermerill](https://github.com/supermerill) has created a custom version of Slic3r PE called [Slic3r++](https://github.com/supermerill/Slic3r). I highly recommend using this version, because it has a lot of new features that the official Slic3r PE is lacking, such as but not limited to top surface ironing, XY hole compensation, continuous perimeter loops, interior top layer supports, avoiding unsupported perimeters, and more! Supermerill  keeps his version current with the latest release of Slic3r PE (so you won't miss out on anything from the main version!) and he's really smart (he's actually the guy that invented Gyroid infill). 
 
-# Achieving Better Print Quality Through Hardware Upgrades
+
 <a name="quality"/>
+# Achieving Better Print Quality Through Hardware Upgrades
 
 There are many things you can do to your Prusa MK3 printer to make it print objects at higher quality. Mostly, it will be print settings in Slic3r that you will have to tweak with trial and error on a per object basis. But let's discuss acheiving better quality with better hardware!
 
@@ -249,8 +252,8 @@ There are also other hardware upgrades listed below that not only correct the 60
 * [Better Thermal Paste for your Heatbreak](https://www.amazon.com/Thermal-Grizzly-Kryonaut-Grease-Paste/dp/B011F7W3LU). Since we know that one of the leading causes of the 602 Issue is bad heatbreak cooling, it couldn't hurt to put a higher quality thermal paste on your heatbreak. Simply unscrew the heatsink from the heatbreak, remove the old thermal paste, and apply the new paste gingerly to the threads. This probably won't help a whole lot, but it can't hurt! The link above is for Thermal Grizzly Kryonaut paste which is very good and what I'm using, but if you want the very best paste look into something called CooLaboratory Liquid Pro - it's the very best paste you can buy, but very expensive.
 
 
-# Recommended Printable Mods For Your Mk3
 <a name="mods"/>
+# Recommended Printable Mods For Your Mk3
 
 Below are mods I highly recommend you make for your MK3. They will either make your life easier, or improve the quality of your prints. Maybe both.
 
@@ -266,9 +269,8 @@ Below are mods I highly recommend you make for your MK3. They will either make y
 
 
 
-
-# Need More Help?
 <a name="help"/>
+# Need More Help?
 
 Check out the Prusa Owner's Wiki:
 
