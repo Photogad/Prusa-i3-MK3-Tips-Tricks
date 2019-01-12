@@ -263,7 +263,7 @@ You can [download it here](https://github.com/prusa3d/Prusa-Firmware/files/27151
 
 To flash to this firmware, simply download the .hex firmware file, connect your MK3 to your computer via USB, and flash the firmware file onto the printer using Slic3r PE.
 
-To actually use the 7x7 mesh bed leveling, you have to insert the M80 N7 gcode command somewhere before your print starts, using the custom start gcode window in Slic3r PE. Or, you can use [My Optimized Startup GCODE Script](#gcode) which already has the 7x7 built into it.
+To actually use the 7x7 mesh bed leveling, you have to insert the G80 N7 gcode command somewhere before your print starts, using the custom start gcode window in Slic3r PE. Or, you can use [My Optimized Startup GCODE Script](#gcode) which already has the 7x7 built into it.
 
 
 <a name="meth"/>
