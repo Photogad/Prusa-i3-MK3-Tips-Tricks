@@ -18,6 +18,8 @@ The following informations are things that I have learned from my 3D printing jo
 
 • [Calibrating Extruder E-Steps](#esteps)
 
+• [Better Slic3r PE Printing Profiles](#profiles)
+
 
 **Troubleshooting**
 
@@ -136,6 +138,21 @@ Did you get 20mm left? If so, great! If not, remember the amount you measured an
 7. Now issue command M500 to save it to your firmware, and you can also do M503 again to verify that the changes were saved.
 
 Your extruder should now be calibrated and pushing 100mm of filament when you ask for it. But you need to verify that it's correct now!  Just start these steps all over again and mark out the 120mm on the filament, and measure when it's done extruding. You should now have 20mm left when you asked it to extrude 100mm.
+
+
+<a name="profiles"/>
+
+# Better Slic3r PE Printing Profiles
+
+Here in my repository, I have several printing profiles uploaded into the [/profiles/](https://github.com/photog0411/Prusa-i3-MK3-Tips-Tricks/tree/master/Printing%20Profiles) folder. These profiles are much better than the stock Prusa profiles included with Slic3r PE, especially if you have a well tuned and calibrated printer that is functioning well. 
+
+Here's the list and notes for each profile:
+
+* Pretty PLA V3.5a.ini - This is Chris Warlocki's latest Pretty PLA profile (as of 1/12/2018) for printing with PLA filament. YOU MUST have the [7x7 Mesh Bed Leveling Firmware](#7x7) installed on your MK3 printer to use it as-is, but you can also use it on stock firmware by changing the "G80 N7" command in the start gcode to just "G80". This profile is highly tuned for the best possible results printing with PLA, and you should see a nice difference in print quality! Keep in mind this profile is only made for the standard .40 nozzle size, but you can also duplicate this profile in Slic3r and change nozzle size on the printer tab to whatever size nozzle you are using.
+* Pretty PETG V3a(7x7).ini - This is Chris Warlocki's latest Pretty PETG profile (as of 1/12/2018) for printing with PETG filament. YOU MUST have the [7x7 Mesh Bed Leveling Firmware](#7x7) installed on your MK3 printer to use it as-is, but you can also use it on stock firmware by changing the "G80 N7" command in the start gcode to just "G80". This profile is highly tuned for the best possible results printing with PETG, and you should see a nice difference in print quality! Keep in mind this profile is only made for the standard .40 nozzle size, but you can also duplicate this profile in Slic3r and change nozzle size on the printer tab to whatever size nozzle you are using.
+
+To install these, just download the .ini files, open Slic3r PE, go to file menu -> Import Profile. Please note that for any of these profiles, I highly recommend duplicating them and adding [My Optimized Startup GCODE](#gcode) to the profiles instead. ;)
+
 
 
 <a name="flai"/>
