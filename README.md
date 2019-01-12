@@ -25,7 +25,7 @@ The following informations are things that I have learned from my 3D printing jo
 
 **Troubleshooting**
 
-• [First Layer Adhesion Issues And How To Fix Them](#flai)
+• [First Layer Bed Adhesion Issues And How To Fix Them](#flai)
 
 • [PETG Sticking To Bed Too Much](#petgstick)
 
@@ -183,7 +183,9 @@ To install these, just download the .ini files, open Slic3r PE, go to file menu 
 
 <a name="flai"/>
 
-# First Layer Adhesion Issues And How To Fix Them
+# First Layer Bed Adhesion Issues And How To Fix Them
+
+**NOTE: The glue stick that ships with the Prusa MK3 does help bed adhesion for PLA, but has the reverse effect when using PETG (makes PETG stick less). But the glue stick is messy and sucks, never use it please. Use the methods below instead.**
 
 Before trying the steps below, make sure you have [calibrated your live Z correctly](#livez). Ignore the Prusa video where Josef says it should be a value of around -1.200. Your value will depend on how far up your PINDA is mounted and how thick your bed plate is. Your live Z value is adjusted properly when the lines of plastic that are laid down do not have any gaps in between them. If you think your live Z is adjusted properly, you may begin the following steps: 
 
@@ -221,8 +223,8 @@ PETG is notorious for sticking to the bed too much; and if you are not careful r
 
 But there's four different solutions, and I recommend the third and fourth ones the most.
 
-1. Wipe some nose grease off of your face and rub it onto the bed. The oils from your face will make the PETG stick less. However, if you can do this easily, you are probably a nasty person that never showers or washes their face, so please shower and scrube more often.
-2. Wipe the steel sheet with a glue stick (Prusa includes this with the printer). The Glue stick helps PLA stick to bed more, but for PETG is has the reverse effect and actually makes PETG stick less. However, glue stick is messy and I really don't recommend it at all.
+1. Wipe some nose grease off of your face and rub it onto the bed. The oils from your face will make the PETG stick less. However, if you can do this easily, you are probably a nasty person that never showers or washes their face, so please shower and scrub more often. I'm only joking of course, but seriously there are better, more reliable methods below.
+2. Wipe the steel sheet with a glue stick (Prusa includes this with the printer). The glue stick helps PLA stick to bed more, but for PETG is has the reverse effect and actually makes PETG stick less. However, glue stick is messy and I really don't recommend it at all.
 3. Wipe the steel sheet with Windex (or any blue window cleaner). Although it doesn't keep the PETG from sticking quite as well as the glue stick, it's much easier to use and a lot less messy! And it works well enough for 99.9% of PETG prints (unless you are printing something very big with a lot of surface area on the bed).
 4. Buy a [powder coated sheet](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV). These sheets are much better than the smooth spring steel sheets. With a powder coated sheet, your PLA will stick more and your PETG will stick less. AWESOME!
 
