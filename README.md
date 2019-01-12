@@ -33,6 +33,8 @@ The following informations are things that I have learned from my 3D printing jo
 
 • [My Optimized Startup GCODE](#gcode)
 
+• [7x7 Mesh Bed Levelign](#7x7)
+
 • [Slic3r PE On Meth](#meth)
 
 • [Achieving Better Print Quality Through Hardware Upgrades](#quality)
@@ -168,6 +170,8 @@ I really recommend buying a pack of [silicone socks for the E3D hot end](https:/
 
 The following startup GCODE is my custom version which has several advantages over the default Prusa startup gcode. First, it waits until the PINDA is at or below 35c before it does anything, and it enables the print fan to help cool it down quicker in case it's already too warm. It then proceeds to preheat the nozzle to warm temperature (but not the actual print temperature) so that when the printer is doing the automated bed leveling, you do not get plastic leaking everywhere. It sets a standardized bed temp of 65c for the automated bed leveling procedure (change this to whatever bed temperature you do your live Z adjust at) because studies have shown that doing the mesh bed leveling at the same temperature that you did your live Z adjust will be the most accurate. Then, it warms up and waits for your PINDA to reach 35c because studies have also shown that the PINDA is the most accurate after it has warmed up to 35c or warmer and does the mesh bed leveling. Finally, it warms everything up to your real printing temperatures, turns the print fan on so you don't get any ooze, runs an advanced purge line that purges better and is easier to remove from your bed (PETG!), and finally your print begins. 
 
+**NOTE: AS OF 1/12/2018, MY GCODE BELOW WILL ONLY WORK ON THE PRUSA MK3 WITH THE CUSTOM [7X7 MESH BED LEVELING FIRMWARE](#7x7) INSTALLED. YOU CAN STILL USE IT ON MK2 AND MK3 WITH STOCK FIRMWARE BY CHANGING THE "G80 N7" line to just "G80"**
+
 ```M83  ; extruder relative mode
 
 ; PINDA cooling
@@ -186,7 +190,7 @@ G28 W ; go home without mesh bed leveling
 M860 S35 ; wait until PINDA is >= 35C
 M140 S65 ; set standardized bed temp for mesh leveling
 M190 R65 ; wait for bed temp to finish
-G80 ; mesh bed leveling @ 65c bed temp across all filament types. Do your first layer calibration at this temp!
+G80 N7 ; 7x7 mesh bed leveling @ 65c bed temp across all filament types. Do your first layer calibration at this temp!
 
 ; Goto start corner and come up to final temp
 G1 Y-3.0 F1000.0 ; go outside print area
@@ -213,6 +217,16 @@ G92 E0.0
 M300 S100 P10 ; chirp - optional
 ```
 
+# 7x7 Mesh Bed Leveling
+<a name="7x7"/>
+
+On the stock MK3, it does a 9-point mesh bed leveling before each print. With custom firmware, it's possible to do a 7x7 mesh leveling (49-point) mesh bed leveling procedure using custom start GCODE. The advantage of doing this is that it will lead to a much more level and accurate bed while printing, if your bed was not very level to begin with or if your steel build sheet has imperfections. The disadvantage to using this is that it will add about a minute to the start of your print, because it's takes longer for the nozzle to move to 49 points and measure them instead of only 9. Personally, I prefer waiting the extra minute to ensure I have a perfectly level bed!
+
+You can [download it here](https://github.com/prusa3d/Prusa-Firmware/files/2715148/Prusa-Firmware-3.5.1-7x7.zip). Please note that the link is for the most recent version as of writing this (1/12/2019), v3.5.1 of the firmware. When Prusa releases the next version of their official firmware, you will have to wait for the firmware modder to add a new version, or temporarily flash to the official Prusa firmware and stop using the 7x7 mesh bed leveling for a period of time. If you join the Prusa Community facebook group, you can [check in the files section for updated releases](https://www.facebook.com/groups/prusacommunity/files/).
+
+To flash to this firmware, simply download the .hex firmware file, connect your MK3 to your computer via USB, and flash the firmware file onto the printer using Slic3r PE.
+
+To actually use the 7x7 mesh bed leveling, you have to insert the M80 N7 gcode command somewhere before your print starts, using the custom start gcode window in Slic3r PE. Or, you can use [My Optimized Startup GCODE Script](#gcode) which already has the 7x7 built into it.
 
 # Slic3r PE On Meth
 <a name="meth"/>
