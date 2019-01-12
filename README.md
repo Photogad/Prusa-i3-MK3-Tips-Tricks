@@ -33,7 +33,7 @@ The following informations are things that I have learned from my 3D printing jo
 
 • [My Optimized Startup GCODE](#gcode)
 
-• [7x7 Mesh Bed Levelign](#7x7)
+• [7x7 Mesh Bed Leveling](#7x7)
 
 • [Slic3r PE On Meth](#meth)
 
@@ -277,6 +277,7 @@ Below are mods I highly recommend you make for your MK3. They will either make y
 * [Taurus Y Axis](https://www.thingiverse.com/thing:3269389). This is a new Y motor mount and belt system, mostly all printable as well. It is much stronger than the default Y axis parts, and allows you to easily tension your Y axis belt. You may notice a slight increase in print quality with this.
 * [Rigid Feet for MK3](https://www.thingiverse.com/thing:3082188). The rubber feet with the Prusa MK3 are great for making the printer slightly quieter, but upgrading to rigid feet (printable) will improve quality and help eliminate ringing and ghosting effects!
 * [Bed Bearing Holder Clamps](https://www.thingiverse.com/thing:2984280). Do you remember how much of a pain in the ass it was to install the bearings to the bottom of your bed using those stupid U-bolt things? Well, print 3 of these puppies out and it will make your life a lot easier in the future if you ever have to change out the bearings. They also made my bed a little bit quieter! Just be careful before installing these, they will NOT work on a stock MK3 frame with M3 Nuts in them (they will bump into the frame), you have to get heat-press inserts (threads!) instead to put in these! Just search online for Brass M3 Heat-Press Threaded Inserts, you will want ones 3mm in length. They are fairly cheap.
+* [Improved Z Motor Mounts](https://www.thingiverse.com/thing:2775169). These improved Z-motor mounts will fix some leveling issues with the stock Z motor mounts, make them sturdier, and also make it easier to take your printer apart in the future because they are modular and have a slot! I highly recommend installing these.
 * [Mk3 Dust Filter](https://www.thingiverse.com/thing:2983334). Easily print and make a dust filter for your extruder. This will help prevent nozzle clogs from happening by filtering dust from your filament. This is only compatible with stock extruder, not bear extruder.
 * [Extruder Visualizer](https://www.thingiverse.com/thing:2638857). Decorate your extruder, but at the same time be able to see what your motor is doing. Great for troubleshooting extruder movements. There are many other design available on thingiverse, or you make your own. All you need is a magnet and some glue.
 * [E3D Nozzle Holder](https://www.thingiverse.com/thing:3280665). A great way to store your E3D nozzles if you have a bunch of them.
