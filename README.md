@@ -102,7 +102,7 @@ Cleaning is simple - just wet an unscented paper towl with 91% or greater isopro
 
 Occasionally, your steel sheet may become so dirty with oils that isopropyl alcohol just does not cut it. In this case, take the steel sheet off of your print bed, bring it to a sink, and scrub it with unscented dish soap. Then dry it. This is the best method to clean your steel sheet, but is kind of annoying to do!
 
-Keep in mind that if you are printing PETG and not PLA, you actually might want a dirtier sheet! PETG is notorious for sticking well (too well) to the steel sheet, and some people actually wipe nose grease (skin oil) onto the the steel sheet before printing PETG. However, a better solution is wiping the steel sheet with Windex (or any blue window cleaner) before printing PETG. It will help the PETG prints to release from the bed when they are done without damaging the PEI surface on your steel sheet. Just make sure to clean the bed again with isopropul alchol or unscented dish soap before printing PLA again!
+Keep in mind that if you are printing PETG and not PLA, you actually might want a dirtier sheet! PETG is notorious for sticking well (too well) to the steel sheet, and some people actually wipe nose grease (skin oil) onto the the steel sheet before printing PETG. However, a better solution is wiping the steel sheet with Windex (or any blue window cleaner) before printing PETG. It will help the PETG prints to release from the bed when they are done without damaging the PEI surface on your steel sheet. Just make sure to clean the bed again with isopropyl alchol or unscented dish soap before printing PLA again!
 
 
 
@@ -219,11 +219,12 @@ I had major issues printing PETG using the default Prusa profiles - the infill w
 
 PETG is notorious for sticking to the bed too much; and if you are not careful removing the print, you can damage the PEI sticker on your steel sheet. It's kind of the reverse problem of PLA - with PLA you want it to stick more, with PETG you want it to stick less.
 
-But there's two simple solutions, and I recommend the second one and third one the most.
+But there's two simple solutions, and I recommend the third and fourth ones the most.
 
-1. Wipe the steel sheet with a glue stick (Prusa includes this with the printer). The Glue stick helps PLA stick to bed more, but for PETG is has the reverse effect and actually makes PETG stick less. However, glue stick is messy and I really don't recommend it at all.
-2. Wipe the steel sheet with Windex (or any blue window cleaner). Although it doesn't keep the PETG from sticking quite as well as the glue stick, it's much easier to use and a lot less messy! And it works well enough for 99.9% of PETG prints (unless you are printing something very big with a lot of surface area on the bed).
-3. Buy a [powder coated sheet](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV). These sheets are much better than the smooth spring steel sheets. With a powder coated sheet, your PLA will stick more and your PETG will stick less. AWESOME!
+1. Wipe some nose grease off of your face and rub it onto the bed. The oils from your face will make the PETG stick less. However, if you can do this easily, you are probably a nasty person that never showers or washes their face, so please shower and scrube more often.
+2. Wipe the steel sheet with a glue stick (Prusa includes this with the printer). The Glue stick helps PLA stick to bed more, but for PETG is has the reverse effect and actually makes PETG stick less. However, glue stick is messy and I really don't recommend it at all.
+3. Wipe the steel sheet with Windex (or any blue window cleaner). Although it doesn't keep the PETG from sticking quite as well as the glue stick, it's much easier to use and a lot less messy! And it works well enough for 99.9% of PETG prints (unless you are printing something very big with a lot of surface area on the bed).
+4. Buy a [powder coated sheet](https://www.amazon.com/Thekkiinngg-Double-Sided-Textured-Powder-Coated-Version/dp/B07HQZCWDV). These sheets are much better than the smooth spring steel sheets. With a powder coated sheet, your PLA will stick more and your PETG will stick less. AWESOME!
 
 
 <a name="sock"/>
